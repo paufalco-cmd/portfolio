@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paula Falco · Service Design Manager · Experience &amp; Product Strategy</title>
+<meta name="description" content="Paula Falco: Service Design Manager con foco en estrategia de experiencia y producto. Casos en fintech, banca, delivery y movilidad.">
+<meta property="og:title" content="Paula Falco · Service Design Manager">
+<meta property="og:description" content="Estrategia de experiencia, UX, CX y producto. Casos de punta a punta, del research al roadmap.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%235F6B2F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEEAE2; --surface:#F7F4EE; --ink:#1C1C19; --muted:#6F6A60; --line:#D6D0C3;
+  --olive:#5F6B2F; --olive-2:#7C8A45; --olive-soft:#DDE2C3; --dark:#262622; --sand:#E4DDCF;
+  --sans:"Inter Tight",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+/* idioma */
+html[data-lang="es"] [lang="en"]{display:none!important}
+html[data-lang="en"] [lang="es"]{display:none!important}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.frame{background:var(--surface);border-radius:28px;margin:16px;min-height:calc(100vh - 32px);overflow:hidden}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.86);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:500;font-size:17px;text-decoration:none;cursor:pointer}
+.dot{width:11px;height:11px;border-radius:50%;background:var(--olive);display:inline-block}
+.tabs{display:flex;gap:4px;background:transparent}
+.tab{border:0;background:transparent;font:inherit;font-size:15px;color:var(--muted);padding:10px 18px;border-radius:999px;cursor:pointer;transition:all .25s}
+.tab:hover{color:var(--ink)}
+.tab.active{background:var(--sand);color:var(--ink);font-weight:500}
+.lang{display:flex;background:var(--sand);border-radius:999px;padding:4px}
+.lang button{border:0;background:transparent;font-family:var(--mono);font-size:12px;letter-spacing:.06em;padding:7px 13px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--ink);color:#fff}
+.burger{display:none;border:0;background:var(--sand);border-radius:999px;padding:9px 14px;font:inherit;font-size:14px;cursor:pointer}
+
+/* vistas */
+.view{display:none;animation:fade .5s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--olive)}
+.label{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.hl{background:var(--olive-soft);border-radius:14px;padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400}
+section{padding:88px 0}
+h2.big{font-size:clamp(34px,4.6vw,58px);font-weight:400;letter-spacing:-.025em;line-height:1.05}
+.lead{font-size:19px;color:var(--muted);max-width:680px}
+
+/* hero */
+.hero{padding:72px 0 40px;text-align:left}
+.pill{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px}
+.pill .dot{width:8px;height:8px;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero-grid{display:grid;grid-template-columns:1.55fr .75fr;gap:56px;align-items:start;margin-top:36px}
+.hero-photo{margin-top:-24px}
+.hero h1{font-size:clamp(46px,7.2vw,104px);font-weight:400;letter-spacing:-.04em;line-height:.98}
+.hero h1 .serif{letter-spacing:-.01em}
+.hero p.sub{font-size:20px;color:var(--muted);margin-top:28px;max-width:640px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;background:var(--olive-soft);padding:14px}
+.hero-photo .tag{position:absolute;left:-18px;bottom:28px;background:var(--dark);color:#fff;border-radius:16px;padding:12px 16px;font-size:13px;line-height:1.35;max-width:210px}
+.photo-cap{text-align:center;margin-top:16px;color:var(--olive)}
+.hero-photo .tag b{color:var(--olive-soft);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chip{border-radius:999px;padding:10px 18px;font-size:14.5px;border:1px solid var(--line);background:#fff}
+.chip.o{background:var(--olive);color:#fff;border-color:var(--olive)}
+.chip.s{background:var(--sand);border-color:var(--sand)}
+.cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:13px 22px;font:inherit;font-size:15px;cursor:pointer;text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px}
+.stat{padding:30px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .n{font-size:52px;font-weight:300;letter-spacing:-.04em;line-height:1}
+.stat .n sup{font-size:.45em;color:var(--olive);vertical-align:top;margin-left:2px}
+.stat .t{font-size:14.5px;color:var(--muted);margin-top:10px}
+
+/* manifesto */
+.manifesto{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.manifesto h2{font-size:clamp(30px,3.8vw,48px);font-weight:400;letter-spacing:-.02em;line-height:1.08}
+.manifesto p{font-size:17px;color:var(--muted);margin-bottom:16px}
+.manifesto p strong{color:var(--ink);font-weight:500}
+
+/* tarjetas de casos */
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;overflow:hidden;cursor:pointer;transition:transform .3s,box-shadow .3s;min-height:330px;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(0,0,0,.25)}
+.card .meta{display:flex;justify-content:space-between}
+.card h3{font-size:28px;font-weight:400;letter-spacing:-.02em;line-height:1.1;margin:16px 0 10px}
+.card p{color:var(--muted);font-size:15px}
+.card .thumb{margin-top:auto;padding-top:20px}
+.card .thumb img{border-radius:14px;height:150px;width:100%;object-fit:cover;object-position:left top;border:1px solid var(--line)}
+.card .mini{display:flex;gap:22px;margin-top:18px}
+.card .mini div{font-size:12.5px;color:var(--muted)}
+.card .mini b{display:block;font-size:24px;font-weight:400;color:var(--ink);letter-spacing:-.02em}
+.card.featured{grid-column:span 2;display:grid;grid-template-columns:1fr 1.15fr;gap:32px;min-height:380px}
+.card.featured .thumb{padding-top:0;margin:0}
+.card.featured .thumb img{height:100%;min-height:300px}
+.wip .blur{filter:blur(5px);opacity:.55;pointer-events:none;user-select:none}
+.wip{cursor:default}
+.wip:hover{transform:none;box-shadow:none}
+.wip-badge{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:2;text-align:center}
+.wip-badge span.b{background:var(--dark);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.1em;padding:9px 16px;border-radius:999px}
+.wip-badge small{font-size:14px;color:var(--ink);background:rgba(255,255,255,.75);padding:4px 10px;border-radius:8px}
+.ph-img{height:150px;border-radius:14px;background:repeating-linear-gradient(135deg,var(--sand) 0 12px,#ECE6DA 12px 24px)}
+
+/* vista caso */
+.case-tabs{display:flex;gap:10px;flex-wrap:wrap;padding-top:40px}
+.ctab{border:1px solid var(--line);background:transparent;border-radius:999px;padding:12px 20px;font:inherit;font-size:15px;cursor:pointer;display:flex;gap:10px;align-items:center}
+.ctab i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.ctab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ctab.active i{color:#bbb}
+.ctab.locked{opacity:.55}
+.case-head{display:grid;grid-template-columns:1.6fr .8fr;gap:56px;padding:56px 0 24px}
+.case-head h1{font-size:clamp(40px,5.6vw,76px);font-weight:400;letter-spacing:-.035em;line-height:1.02;margin:16px 0 22px}
+.case-head .lead{font-size:20px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{padding:16px 0;border-bottom:1px solid var(--line)}
+.facts dd{font-size:16px;margin-top:6px}
+.bignums{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:48px 0 24px}
+.bignum .n{font-size:clamp(48px,6vw,84px);font-weight:500;color:var(--olive);letter-spacing:-.05em;line-height:1}
+.bignum .bar{display:flex;gap:5px;margin:16px 0 12px}
+.bignum .bar span{height:10px;flex:1;border-radius:3px;background:var(--ink)}
+.bignum .bar span.off{background:var(--line)}
+.bignum .t{font-size:19px;color:var(--muted);line-height:1.3}
+.block{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:44px 0;border-top:1px solid var(--line)}
+.block h3{font-size:clamp(24px,2.6vw,34px);font-weight:400;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.block p{font-size:17px;color:var(--muted);max-width:760px}
+.findings{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.finding{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.finding .k{font-family:var(--mono);font-size:12px;color:var(--olive)}
+.finding h4{font-size:19px;font-weight:500;margin:10px 0 8px;letter-spacing:-.01em}
+.finding p{font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:22px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.step{padding:22px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step h4{font-size:18px;font-weight:500;margin:8px 0 6px}
+.step p{font-size:14.5px}
+.fig{margin-top:22px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff;cursor:zoom-in;position:relative}
+.fig img{width:100%}
+.fig .zoom{position:absolute;right:14px;top:14px;background:rgba(28,28,25,.85);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:7px 11px;border-radius:999px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;align-items:stretch}
+.split .steps,.split .findings{grid-template-columns:1fr;margin-top:0}
+.split .steps .step{border-right:0;border-bottom:1px solid var(--line)}
+.split .steps .step:last-child{border-bottom:0}
+.split .finding{padding:18px 20px}
+.split .finding h4{margin:6px 0 4px;font-size:17px}
+.fig.peek{margin-top:0;min-height:300px;max-height:420px}
+.fig.peek img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;filter:saturate(.85)}
+.fig.peek:hover img{transform:scale(1.04)}
+.fig.peek::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(28,28,25,.55));pointer-events:none}
+.fig.peek .cap{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.fig.peek .cap::after{content:"  ⤢"}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+.scrollfig{overflow-x:auto;cursor:grab}
+.scrollfig img{width:auto;max-width:none;height:420px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{background:var(--olive-soft);color:var(--olive);font-size:14px;padding:7px 14px;border-radius:999px;font-weight:500}
+details.more{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:#fff}
+details.more summary{cursor:pointer;padding:16px 20px;font-size:15px;font-weight:500;list-style:none;display:flex;justify-content:space-between}
+details.more summary::after{content:"+";font-family:var(--mono)}
+details.more[open] summary::after{content:"–"}
+details.more .in{padding:0 20px 20px;color:var(--muted);font-size:15px}
+details.more ul{padding-left:18px}
+details.more li{margin-bottom:8px}
+.next-case{display:flex;justify-content:space-between;align-items:center;margin:40px 0 0;padding:32px;border-radius:24px;background:var(--dark);color:#fff;cursor:pointer}
+.next-case h4{font-size:28px;font-weight:400;letter-spacing:-.02em}
+
+.more-list{border-top:2px solid var(--ink)}
+.mp{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:28px 0;border-bottom:1px solid var(--line)}
+.mp-meta{display:flex;flex-direction:column;gap:6px}
+.mp h4{font-size:24px;font-weight:400;letter-spacing:-.02em;margin-bottom:10px}
+.mp p{font-size:16px;color:var(--muted);max-width:780px}
+.mp-res{margin-top:14px}.mp-res b{color:var(--ink);font-weight:500}
+.mp-wip h4{color:var(--muted);font-size:18px;margin:0}
+.ladder{display:flex;align-items:flex-end;gap:8px;margin-top:18px;max-width:780px}
+.ladder div{flex:1;background:var(--olive-soft);border-radius:12px;padding:12px;font-size:13.5px;line-height:1.3}
+.ladder div:nth-child(1){min-height:70px}.ladder div:nth-child(2){min-height:90px;background:#CDD4A6}
+.ladder div:nth-child(3){min-height:110px;background:#A9B46E;color:#fff}.ladder div:nth-child(4){min-height:130px;background:var(--olive);color:#fff}
+.ladder b{display:block;font-family:var(--mono);font-size:12px;margin-bottom:6px;opacity:.8}
+.mp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;max-width:880px}
+.mp-steps div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.mp-steps b{font-family:var(--mono);font-size:12px;color:var(--olive);font-weight:400}
+.mp-steps h5{font-size:16px;font-weight:500;margin:6px 0 4px}
+.mp-steps p{font-size:14px}
+.lead-card{grid-column:span 2;min-height:240px}
+/* liderazgo */
+.lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.lcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.lcard h4{font-size:20px;font-weight:500;margin:10px 0 8px;letter-spacing:-.01em}
+.lcard p{font-size:15px;color:var(--muted)}
+.biz{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:28px}
+.biz div{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fff}
+.biz b{display:block;font-size:18px;font-weight:500}
+.biz span{font-size:13px;color:var(--muted)}
+.process{display:flex;gap:0;margin-top:28px;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.process div{flex:1;padding:16px 10px;text-align:center;font-size:14px;background:#fff;border-right:1px solid var(--line)}
+.process div:last-child{border-right:0;background:var(--olive);color:#fff}
+.process div:nth-child(1){background:var(--olive-soft)}
+.process div:nth-child(2){background:#E6E9D2}
+.wip-box{border:1.5px dashed var(--olive-2);border-radius:22px;padding:26px;margin-top:20px;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(221,226,195,.35) 14px 28px)}
+
+/* sobre mi */
+.about{display:grid;grid-template-columns:.95fr 1.25fr;gap:28px;align-items:start}
+.about-photo{background:var(--sand);border-radius:28px;padding:36px 36px 110px}
+.about-photo img{border-radius:50%;width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1)}
+.quote{background:var(--dark);color:#EDEAE2;border-radius:28px;padding:40px 38px;position:relative;margin-top:-90px;margin-left:24px;margin-right:-24px;z-index:2}
+.quote .q{font-family:var(--serif);font-size:120px;line-height:.6;color:var(--olive-soft);display:block;height:50px}
+.quote h3{font-size:30px;font-weight:400;letter-spacing:-.01em;line-height:1.15;margin:8px 0 14px;color:#fff}
+.quote p{font-size:15.5px;color:#BFBAAE}
+.quote cite{display:block;margin-top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--olive-soft);font-style:normal}
+.about-name{font-size:clamp(54px,7vw,104px);font-weight:500;letter-spacing:-.045em;line-height:.92}
+.about-text p{font-size:17.5px;color:var(--muted);margin-top:18px}
+.about-text p strong{color:var(--ink);font-weight:500}
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;margin-top:72px}
+.tl{border-top:2px solid var(--ink)}
+.tl-item{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.tl-item .d{font-family:var(--mono);font-size:12px;color:var(--olive);padding-top:4px}
+.tl-item h4{font-size:18px;font-weight:500}
+.tl-item .co{font-size:14.5px;color:var(--muted);display:block}
+.side h5{margin:0 0 14px}
+.side ul{list-style:none;margin-bottom:34px}
+.side li{padding:11px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.side li small{display:block;color:var(--muted);font-size:13px}
+
+/* contacto */
+.contact{padding:110px 0 40px}
+.contact-big{font-size:clamp(76px,15vw,220px);font-weight:400;letter-spacing:-.06em;line-height:.85;display:flex;align-items:end;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0 20px;margin:40px 0}
+.contact-big .arrow{font-size:.55em;color:var(--olive);transition:transform .3s}
+.contact-big:hover .arrow{transform:translate(10px,10px)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.contact-grid a,.contact-grid div{font-size:18px;text-decoration:none}
+.contact-grid a:hover{color:var(--olive)}
+footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:70px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(20,20,18,.92);z-index:100;display:none;overflow:auto;padding:60px 24px;cursor:zoom-out}
+.lb.on{display:block}
+.lb img{max-width:none;width:min(2400px,220vw);margin:0 auto;border-radius:12px}
+.lb .x{position:fixed;top:18px;right:22px;color:#fff;font-family:var(--mono);font-size:13px;background:rgba(255,255,255,.12);padding:9px 14px;border-radius:999px}
+
+@media (max-width:960px){
+  .tabs{display:none;position:absolute;top:76px;left:16px;right:16px;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:10px}
+  .tabs.open{display:flex}
+  .burger{display:block}
+  .hero-grid,.manifesto,.case-head,.about,.cols{grid-template-columns:1fr}
+  .hero-photo{max-width:320px}
+  .stats,.bignums{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .cases{grid-template-columns:1fr}
+  .card.featured,.lead-card{grid-column:span 1;grid-template-columns:1fr}
+  .block{grid-template-columns:1fr;gap:10px}
+  .findings,.steps,.lead-grid,.contact-grid,.split,.mp{grid-template-columns:1fr}
+  .ladder{flex-wrap:wrap}.mp-steps{grid-template-columns:1fr}.ladder div{flex:1 1 45%}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .biz{grid-template-columns:repeat(2,1fr)}
+  .process{flex-direction:column;border-radius:20px}
+  .quote{margin:-60px 12px 0}
+  .wrap{padding:0 20px}
+  .frame{margin:8px;border-radius:20px}
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" data-go="inicio"><span class="dot"></span>Paula Falco</a>
+    <nav class="tabs" id="tabs">
+      <button class="tab" data-go="inicio"><span lang="es">Inicio</span><span lang="en">Home</span></button>
+      <button class="tab" data-go="casos"><span lang="es">Casos</span><span lang="en">Case studies</span></button>
+      <button class="tab" data-go="mas-proyectos"><span lang="es">Más proyectos</span><span lang="en">More projects</span></button>
+      <button class="tab" data-go="liderazgo"><span lang="es">Liderazgo</span><span lang="en">Leadership</span></button>
+      <button class="tab" data-go="sobre-mi"><span lang="es">Sobre mí</span><span lang="en">About</span></button>
+      <button class="tab" data-go="contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></button>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+      <div class="lang"><button data-l="es" class="on">ESP</button><button data-l="en">ENG</button></div>
+      <button class="burger" id="burger">Menú</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= INICIO ================= -->
+<main>
+<div class="view" id="v-inicio">
+  <div class="wrap">
+    <div class="hero">
+      <span class="pill"><span class="dot"></span>
+        <span lang="es">Disponible para nuevos desafíos · Remoto o híbrido · Córdoba, Buenos Aires y más</span>
+        <span lang="en">Open to new challenges · Remote or hybrid · Córdoba, Buenos Aires and beyond</span></span>
+      <div class="hero-grid">
+        <div>
+          <h1 class="reveal">
+            <span lang="es">Todo comunica.<br><span class="serif">Cada</span> <span class="hl">experiencia,</span> también.</span>
+            <span lang="en">Everything communicates.<br><span class="serif">Every</span> <span class="hl">experience,</span> too.</span>
+          </h1>
+          <p class="sub reveal">
+            <span lang="es">Service Design Manager con foco en estrategia de experiencia y producto. Servicios complejos diseñados de punta a punta, de lo que ve el cliente a todo lo que pasa detrás, junto a líderes de Producto y Tecnología.</span>
+            <span lang="en">Service Design Manager focused on experience and product strategy. Complex services designed end to end, from what customers see to everything behind the scenes, alongside Product and Tech leaders.</span>
+          </p>
+          <div class="chips reveal">
+            <span class="chip o">Service Design</span>
+            <span class="chip">UX Lead</span>
+            <span class="chip">UX Research</span>
+            <span class="chip">Customer Experience</span>
+            <span class="chip">Product Discovery &amp; Strategy</span>
+            <span class="chip s">Fintech · Delivery · <span lang="es">Movilidad</span><span lang="en">Mobility</span> · Ticketing · E-commerce</span>
+          </div>
+          <div class="cta reveal">
+            <button class="btn" data-go="casos"><span lang="es">Ver casos</span><span lang="en">See case studies</span> →</button>
+            <button class="btn ghost" data-go="liderazgo"><span lang="es">Liderazgo</span><span lang="en">Leadership</span></button>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <img src="img/paula.png" alt="Paula Falco">
+          <div class="photo-cap label"><span lang="es">De la comunicación al diseño de servicios</span><span lang="en">From communication to service design</span></div>
+        </div>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><div class="n"><span class="count" data-to="5">5</span><sup>+</sup></div><div class="t"><span lang="es">años en Service Design</span><span lang="en">years in Service Design</span></div></div>
+        <div class="stat"><div class="n"><span class="count" data-to="8">8</span></div><div class="t"><span lang="es">personas en un equipo armado desde cero</span><span lang="en">people in a team built from scratch</span></div></div>
+        <div class="stat"><div class="n"><span class="count" data-to="6">6</span></div><div class="t"><span lang="es">negocios donde instalamos la disciplina</span><span lang="en">businesses where we embedded the practice</span></div></div>
+        <div class="stat"><div class="n"><span class="count" data-to="15">15</span><sup>+</sup></div><div class="t"><span lang="es">años de trayectoria profesional</span><span lang="en">years of professional experience</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap manifesto">
+      <h2 class="reveal"><span lang="es">Entender a las personas, <span class="serif">ver cómo se conectan las piezas</span> y armar equipos que mejoren la experiencia.</span><span lang="en">Understanding people, <span class="serif">seeing how the pieces connect</span> and building teams that improve the experience.</span></h2>
+      <div class="reveal">
+        <p><span lang="es">Desafíos grandes y complejos: la <strong>fusión de dos bancos</strong>, la <strong>migración de la atención a Salesforce</strong>, el diseño de <strong>backoffices</strong> y proyectos core como el <strong>onboarding</strong>.</span><span lang="en">Big, complex challenges: a <strong>merger between two banks</strong>, the <strong>migration of customer care to Salesforce</strong>, <strong>back-office</strong> design and core projects like <strong>onboarding</strong>.</span></p>
+        <p><span lang="es">Y un equipo que llevó el diseño de servicios a negocios de <strong>delivery, movilidad, ticketing y e-commerce</strong>.</span><span lang="en">And a team that brought service design to <strong>delivery, mobility, ticketing and e-commerce</strong> businesses.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="eyebrow"><span lang="es">Trabajo seleccionado</span><span lang="en">Selected work</span></div>
+        <h2 class="big" style="margin-top:12px"><span lang="es">Casos</span><span lang="en">Case studies</span></h2></div>
+        <div><p class="lead" style="max-width:420px"><span lang="es">Proyectos de punta a punta: del research al blueprint y de ahí a la acción.</span><span lang="en">End-to-end projects: from research to blueprint, and from there to action.</span></p><button class="btn ghost" data-go="mas-proyectos" style="margin-top:14px"><span lang="es">Ver más proyectos</span><span lang="en">See more projects</span> →</button></div>
+      </div>
+      <div class="cases">
+        <article class="card featured reveal" data-go="caso-01">
+          <div style="display:flex;flex-direction:column">
+            <div class="meta"><span class="label">01 · Naranja X · 2021</span><span class="label">Service Designer</span></div>
+            <h3><span lang="es">14 minutos para pedirla. <span class="hl">Hasta 5 semanas</span> para usarla.</span><span lang="en">14 minutes to apply. <span class="hl">Up to 5 weeks</span> to use it.</span></h3>
+            <p><span lang="es">Rediseño de la originación de tarjetas de crédito y la primera compra.</span><span lang="en">Redesigning credit card origination and first purchase.</span></p>
+            <div class="mini">
+              <div><b>14 min</b><span lang="es">para originarse</span><span lang="en">to apply</span></div>
+              <div><b>15 <span lang="es">días</span><span lang="en">days</span></b><span lang="es">para el plástico</span><span lang="en">to get the card</span></div>
+              <div><b>1 de 2</b><span lang="es">sin tarjeta a los 15 días</span><span lang="en">without card at day 15</span></div>
+            </div>
+            <div style="margin-top:auto;padding-top:24px"><span class="btn"><span lang="es">Leer caso</span><span lang="en">Read case</span> →</span></div>
+          </div>
+          <div class="thumb"><img src="img/blueprint-resumido.jpg" alt="Service blueprint"></div>
+        </article>
+
+        <article class="card reveal" data-go="caso-02">
+          <div class="meta"><span class="label">02 · ueno bank · 2023–2025</span><span class="label">SR Service Designer</span></div>
+          <h3><span lang="es">Antes de la herramienta, <span class="hl">el modelo de atención.</span></span><span lang="en">Before the tool, <span class="hl">the service model.</span></span></h3>
+          <p><span lang="es">Del discovery de Zendesk a la migración a Salesforce.</span><span lang="en">From a Zendesk discovery to the Salesforce migration.</span></p>
+          <div class="thumb"><img src="img/c2-ecosystem.jpg" alt="Ecosystem map Zendesk" style="object-position:50% 45%"></div>
+        </article>
+        <article class="card reveal" data-go="caso-03">
+          <div class="meta"><span class="label">03 · ueno bank · 2025</span><span class="label">Service Designer</span></div>
+          <h3><span lang="es">¿CRM o backoffice? <span class="hl">Dónde vive cada necesidad.</span></span><span lang="en">CRM or back office? <span class="hl">Where each need lives.</span></span></h3>
+          <p><span lang="es">Discovery de integraciones entre Salesforce y el backoffice del banco.</span><span lang="en">Integration discovery between Salesforce and the bank's back office.</span></p>
+          <div class="thumb"><img src="img/c3-ecosystem.jpg" alt="Ecosystem map" style="object-position:50% 45%"></div>
+        </article>
+                <article class="card reveal lead-card" data-go="liderazgo" style="background:var(--dark);color:#fff;border-color:var(--dark)">
+          <div class="meta"><span class="label" style="color:#A9A49A">04 · itti · 2025–2026</span><span class="label" style="color:var(--olive-soft)">Manager</span></div>
+          <h3><span lang="es">Llevar Service Design a <span class="serif">6 negocios</span></span><span lang="en">Bringing Service Design to <span class="serif">6 businesses</span></span></h3>
+          <p style="color:#BFBAAE"><span lang="es">Un equipo armado desde cero para expandir la práctica más allá del banco.</span><span lang="en">A team built from scratch to expand the practice beyond the bank.</span></p>
+          <div style="margin-top:auto;padding-top:24px"><span class="btn" style="background:var(--olive-soft);color:var(--ink);border-color:var(--olive-soft)"><span lang="es">Ver liderazgo</span><span lang="en">See leadership</span> →</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CASOS ================= -->
+<div class="view" id="v-casos">
+  <div class="wrap">
+    <div class="case-tabs">
+      <button class="ctab active" data-case="c1" data-go="caso-01"><i>01</i><span lang="es">Originación + 1ra compra</span><span lang="en">Origination + 1st purchase</span></button>
+      <button class="ctab" data-case="c2" data-go="caso-02"><i>02</i>Zendesk → Salesforce</button>
+      <button class="ctab" data-case="c3" data-go="caso-03"><i>03</i>CRM × <span lang="es">Backoffice</span><span lang="en">Back office</span></button>
+      
+    </div>
+
+    <div id="case-c1" class="case-pane">
+      <div class="case-head">
+        <div>
+          <div class="eyebrow"><span lang="es">Caso 01 · Service Designer · Naranja X · 2021</span><span lang="en">Case 01 · Service Designer · Naranja X · 2021</span></div>
+          <h1><span lang="es">14 minutos para pedirla. <span class="hl">Hasta 5 semanas</span> para usarla.</span><span lang="en">14 minutes to apply. <span class="hl">Up to 5 weeks</span> to use it.</span></h1>
+          <p class="lead"><span lang="es">Rediseño de la originación de tarjetas de crédito y de la primera compra. La pantalla era rápida; el problema estaba en el backstage.</span><span lang="en">Redesigning credit card origination and first purchase. The screens were fast; the problem was backstage.</span></p>
+        </div>
+        <dl class="facts">
+          <div><dt class="label"><span lang="es">Rol</span><span lang="en">Role</span></dt><dd>Service Designer</dd></div>
+          <div><dt class="label"><span lang="es">Equipo</span><span lang="en">Team</span></dt><dd><span lang="es">Research, Product Design, Content, Producto y Operaciones</span><span lang="en">Research, Product Design, Content, Product and Operations</span></dd></div>
+          <div><dt class="label"><span lang="es">Método</span><span lang="en">Method</span></dt><dd><span lang="es">Simulación de flujos, +30 entrevistas a referentes, service blueprint, workshops</span><span lang="en">Flow simulations, 30+ stakeholder interviews, service blueprint, workshops</span></dd></div>
+          <div><dt class="label"><span lang="es">Duración</span><span lang="en">Duration</span></dt><dd><span lang="es">+6 meses</span><span lang="en">6+ months</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="bignums reveal">
+        <div class="bignum"><div class="n">14′</div><div class="bar"><span></span><span class="off"></span><span class="off"></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">para originarse y hacer el onboarding</span><span lang="en">to apply and onboard</span></div></div>
+        <div class="bignum"><div class="n">15d</div><div class="bar"><span></span><span></span><span></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">para recibir el plástico</span><span lang="en">to receive the physical card</span></div></div>
+        <div class="bignum"><div class="n">+20d</div><div class="bar"><span></span><span></span><span></span><span></span><span></span></div><div class="t"><span lang="es">hasta la primera compra</span><span lang="en">until the first purchase</span></div></div>
+        <div class="bignum"><div class="n">1/2</div><div class="bar"><span></span><span class="off"></span></div><div class="t"><span lang="es">clientes sin tarjeta a los 15 días</span><span lang="en">customers without a card at day 15</span></div></div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">El desafío</span><span lang="en">The challenge</span></div>
+        <div>
+          <h3><span lang="es">Que el cliente tenga su tarjeta en la mano en el menor tiempo posible.</span><span lang="en">Getting the card into the customer's hands as fast as possible.</span></h3>
+          <p><span lang="es">Naranja X pasaba de emisora de tarjetas a ecosistema financiero digital. La solicitud online era rápida, pero la experiencia completa (de pedir la tarjeta a usarla) no lo era.</span><span lang="en">Naranja X was evolving from card issuer to a digital financial ecosystem. Applying online was fast, but the full experience, from applying to actually using the card, was not.</span></p>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Abordaje</span><span lang="en">Approach</span></div>
+        <div>
+          <h3><span lang="es">Recorrer el servicio como cliente y mapearlo de punta a punta.</span><span lang="en">Walking through the service as a customer and mapping it end to end.</span></h3>
+          <div class="split">
+            <div class="steps">
+              <div class="step"><span class="label">01</span><h4><span lang="es">Inmersión</span><span lang="en">Immersion</span></h4><p><span lang="es">Simulación de flujos por web, sucursal y las dos apps que convivían.</span><span lang="en">Flow simulations across web, branches and two coexisting apps.</span></p></div>
+              <div class="step"><span class="label">02</span><h4><span lang="es">Descubrir</span><span lang="en">Discover</span></h4><p><span lang="es">+30 entrevistas a referentes, service blueprint y ecosystem map.</span><span lang="en">30+ stakeholder interviews, service blueprint and ecosystem map.</span></p></div>
+              <div class="step"><span class="label">03</span><h4><span lang="es">Idear</span><span lang="en">Ideate</span></h4><p><span lang="es">3 workshops de co-creación con equipos multidisciplinarios.</span><span lang="en">3 co-creation workshops with cross-functional teams.</span></p></div>
+            </div>
+            <figure class="fig peek" data-zoom="img/blueprint-resumido.jpg"><img src="img/blueprint-resumido.jpg" alt="Service blueprint" style="object-position:20% 0"><span class="cap"><span lang="es">Service blueprint resumido</span><span lang="en">Summary service blueprint</span></span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Hallazgos</span><span lang="en">Findings</span></div>
+        <div>
+          <h3><span lang="es">El problema no estaba en la pantalla.</span><span lang="en">The problem wasn't on the screen.</span></h3>
+          <div class="split">
+            <div class="findings">
+              <div class="finding"><span class="k">01</span><h4><span lang="es">La demora vivía en el backstage</span><span lang="en">Delays lived backstage</span></h4><p><span lang="es">Riesgo, validaciones, logística y avisos repartidos entre muchos equipos.</span><span lang="en">Risk, validations, logistics and notices spread across many teams.</span></p></div>
+              <div class="finding"><span class="k">02</span><h4><span lang="es">Sin omnicanalidad</span><span lang="en">No omnichannel</span></h4><p><span lang="es">Si alguien se trababa online, la sucursal no podía ayudarlo.</span><span lang="en">If someone got stuck online, branches couldn't help.</span></p></div>
+              <div class="finding"><span class="k">03</span><h4><span lang="es">3 momentos de la verdad</span><span lang="en">3 moments of truth</span></h4><p><span lang="es">La entrega del plástico, los límites y una primera compra sin acompañamiento.</span><span lang="en">Card delivery, credit limits and an unguided first purchase.</span></p></div>
+            </div>
+            <figure class="fig peek" data-zoom="img/ecosystem-map.jpg"><img src="img/ecosystem-map.jpg" alt="Ecosystem map" style="object-position:50% 45%"><span class="cap">Ecosystem map</span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Del mapa a la acción</span><span lang="en">From map to action</span></div>
+        <div>
+          <div class="split">
+            <div>
+              <h3><span lang="es">Del blueprint a un backlog con dueños claros.</span><span lang="en">From blueprint to a backlog with clear owners.</span></h3>
+              <p><span lang="es">Una ficha por cada una de las 8 etapas: insight, pain points, quotes, dueño del tema, iniciativas en curso y si correspondía llevarlo a workshop.</span><span lang="en">One card for each of the 8 stages: insight, pain points, quotes, owner, ongoing initiatives and whether it should go to a workshop.</span></p>
+            </div>
+            <figure class="fig peek" data-zoom="img/fichas-etapas.jpg"><img src="img/fichas-etapas.jpg" alt="Fichas por etapa" style="object-position:35% 20%"><span class="cap"><span lang="es">Accionables por etapa</span><span lang="en">Actionables per stage</span></span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Co-creación</span><span lang="en">Co-creation</span></div>
+        <div>
+          <h3><span lang="es">Un "viaje creativo al espacio" en tres días.</span><span lang="en">A three-day "creative space journey".</span></h3>
+          <div class="steps">
+              <div class="step"><span class="label"><span lang="es">Día 1</span><span lang="en">Day 1</span></span><h4>Planeta GEN</h4><p>Ideation Mash-Up · Opposite Thinking</p></div>
+              <div class="step"><span class="label"><span lang="es">Día 2</span><span lang="en">Day 2</span></span><h4>Planeta CONV3RG3R</h4><p>Concept Canvas</p></div>
+              <div class="step"><span class="label"><span lang="es">Día 3</span><span lang="en">Day 3</span></span><h4>Planeta DEFINITIO</h4><p><span lang="es">Matriz How-Now-Wow y presentación</span><span lang="en">How-Now-Wow matrix and pitch</span></p></div>
+            </div>
+        </div>
+      </div>
+      <div class="block reveal">
+        <div class="label"><span lang="es">Resultado</span><span lang="en">Outcome</span></div>
+        <div>
+          <h3><span lang="es">Las iniciativas clave para la experiencia ideal.</span><span lang="en">The key initiatives for the ideal experience.</span></h3>
+          <div class="tags"><span>Scoring online</span><span><span lang="es">Originación 100% in app + firma digital</span><span lang="en">100% in-app origination + e-signature</span></span><span><span lang="es">Tarjeta virtual</span><span lang="en">Virtual card</span></span><span><span lang="es">Pagos con QR</span><span lang="en">QR payments</span></span></div>
+          <p style="margin-top:18px"><span lang="es">El blueprint se volvió la referencia compartida del flujo y dio paso al discovery del onboarding in app.</span><span lang="en">The blueprint became the shared reference for the flow and led to the in-app onboarding discovery.</span></p>
+        </div>
+      </div>
+
+      <div class="next-case" data-go="caso-02">
+        <div><div class="label" style="color:#A9A49A"><span lang="es">Siguiente</span><span lang="en">Next</span></div><h4><span lang="es">Caso 02: antes de la herramienta, el modelo de atención</span><span lang="en">Case 02: before the tool, the service model</span></h4></div>
+        <span style="font-size:32px;color:var(--olive-soft)">→</span>
+      </div>
+    </div>
+    <div id="case-c2" class="case-pane" hidden>
+      <div class="case-head">
+        <div>
+          <div class="eyebrow"><span lang="es">Caso 02 · SR Service Designer · Care &amp; Comms · ueno bank · dic. 2023 – ene. 2025</span><span lang="en">Case 02 · SR Service Designer · Care &amp; Comms · ueno bank · Dec 2023 – Jan 2025</span></div>
+          <h1><span lang="es">Antes de la herramienta, <span class="hl">el modelo de atención.</span></span><span lang="en">Before the tool, <span class="hl">the service model.</span></span></h1>
+          <p class="lead"><span lang="es">Del discovery de Zendesk a la migración a Salesforce: las bases de la atención de un banco recién nacido.</span><span lang="en">From a Zendesk discovery to the Salesforce migration: laying the foundations of customer care for a brand-new bank.</span></p>
+        </div>
+        <dl class="facts">
+          <div><dt class="label"><span lang="es">Rol</span><span lang="en">Role</span></dt><dd><span lang="es">SR Service Designer · referente de Service Design del proyecto</span><span lang="en">SR Service Designer · Service Design lead for the project</span></dd></div>
+          <div><dt class="label"><span lang="es">Equipo</span><span lang="en">Team</span></dt><dd><span lang="es">Experiencia, Operaciones, Producto, Content y Salesforce</span><span lang="en">Customer Experience, Operations, Product, Content and Salesforce</span></dd></div>
+          <div><dt class="label"><span lang="es">Método</span><span lang="en">Method</span></dt><dd><span lang="es">Entrevistas a stakeholders, service safari, shadowing, ecosystem y experience map, workshops</span><span lang="en">Stakeholder interviews, service safari, shadowing, ecosystem and experience maps, workshops</span></dd></div>
+          <div><dt class="label"><span lang="es">Duración</span><span lang="en">Duration</span></dt><dd><span lang="es">~14 meses</span><span lang="en">~14 months</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="bignums reveal">
+        <div class="bignum"><div class="n">6m</div><div class="bar"><span></span><span></span><span></span><span></span><span></span></div><div class="t"><span lang="es">el caso más antiguo sin respuesta</span><span lang="en">the oldest unanswered case</span></div></div>
+        <div class="bignum"><div class="n">+100</div><div class="bar"><span></span><span></span><span></span><span></span><span class="off"></span></div><div class="t"><span lang="es">plantillas de respuesta dispersas</span><span lang="en">scattered response templates</span></div></div>
+        <div class="bignum"><div class="n">~3m</div><div class="bar"><span></span><span></span><span></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">de relevamiento de motivos de contacto</span><span lang="en">mapping contact reasons</span></div></div>
+        <div class="bignum"><div class="n">3</div><div class="bar"><span></span><span></span><span></span></div><div class="t"><span lang="es">tipos de contacto: consulta, solicitud y reclamo</span><span lang="en">contact types: inquiry, request and complaint</span></div></div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">El contexto</span><span lang="en">Context</span></div>
+        <div>
+          <h3><span lang="es">Un banco nuevo, una atención armada a fuerza de parches.</span><span lang="en">A new bank, with customer care held together by patches.</span></h3>
+          <p><span lang="es">ueno acababa de obtener la licencia bancaria: dos sucursales, call center y un chatbot en crecimiento. En Zendesk se acumulaban bandejas, tareas manuales y casos escalados que superaban los SLA de 24/48/72 h.</span><span lang="en">ueno had just received its banking license: two branches, a call center and a growing chatbot. Zendesk had piled up queues, manual tasks and escalated cases well beyond their 24/48/72 h SLAs.</span></p>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label">01 · Discovery Zendesk</div>
+        <div>
+          <h3><span lang="es">Entender la herramienta desde quien la usa todos los días.</span><span lang="en">Understanding the tool through the people who use it every day.</span></h3>
+          <div class="split">
+            <div>
+              <p><span lang="es">Entrevistas a stakeholders, service safari y shadowing en los canales telefónico, digital y presencial. El ecosystem map resume cómo cada ejecutivo recibe, carga, analiza, deriva y responde un caso, y entre cuántas herramientas salta para hacerlo.</span><span lang="en">Stakeholder interviews, service safari and shadowing across phone, digital and branch channels. The ecosystem map shows how agents receive, log, analyze, escalate and answer a case, and how many tools they jump between to do it.</span></p>
+              <div class="findings" style="margin-top:18px">
+                <div class="finding"><span class="k">01</span><h4><span lang="es">Un árbol de tipificación sin lógica</span><span lang="en">A classification tree with no logic</span></h4><p><span lang="es">Se podía tipificar por cualquier camino: los campos no se acotaban a medida que se elegía.</span><span lang="en">Cases could be classified any way: fields didn't narrow down as you chose.</span></p></div>
+                <div class="finding"><span class="k">02</span><h4><span lang="es">Escalamientos sin dueño</span><span lang="en">Escalations without owners</span></h4><p><span lang="es">Las áreas internas priorizaban su operación diaria y los casos quedaban sin respuesta.</span><span lang="en">Internal teams prioritized daily operations, leaving cases unanswered.</span></p></div>
+              </div>
+            </div>
+            <figure class="fig peek" data-zoom="img/c2-ecosystem.jpg"><img src="img/c2-ecosystem.jpg" alt="Ecosystem map Zendesk" style="object-position:50% 40%"><span class="cap">Ecosystem map · Zendesk</span></figure>
+          </div>
+          <div class="split">
+            <figure class="fig peek" data-zoom="img/c2-experience.jpg"><img src="img/c2-experience.jpg" alt="Experience map" style="object-position:30% 30%"><span class="cap">Experience map · <span lang="es">ejecutivos</span><span lang="en">agents</span></span></figure>
+            <figure class="fig peek" data-zoom="img/c2-arquitectura.jpg"><img src="img/c2-arquitectura.jpg" alt="Arquitectura de información" style="object-position:20% 10%"><span class="cap"><span lang="es">Arquitectura de información</span><span lang="en">Information architecture</span></span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Quick wins semanales</span><span lang="en">Weekly quick wins</span></div>
+        <div>
+          <div class="split">
+            <div>
+              <h3><span lang="es">Accionar sin esperar al entregable final.</span><span lang="en">Acting without waiting for the final deliverable.</span></h3>
+              <p><span lang="es">Cada sync semanal bajaba hallazgos y quick wins a los equipos. Después, un backlog trabajado con Experiencia: ajustes de plantillas, FAQs junto a Content y respuestas automatizadas en el chatbot.</span><span lang="en">Each weekly sync turned findings into quick wins for the teams. Then came a backlog worked with Customer Experience: template fixes, FAQs with Content and automated chatbot answers.</span></p>
+            </div>
+            <figure class="fig peek" data-zoom="img/c2-hallazgos.jpg"><img src="img/c2-hallazgos.jpg" alt="Hallazgos semanales" style="object-position:50% 10%"><span class="cap"><span lang="es">Hallazgos por sync</span><span lang="en">Findings per sync</span></span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label">02 · <span lang="es">Ficha 360° del cliente</span><span lang="en">360° customer view</span></div>
+        <div>
+          <div class="split">
+            <div>
+              <h3><span lang="es">Todo lo que un ejecutivo necesita ver, en un solo lugar.</span><span lang="en">Everything an agent needs to see, in one place.</span></h3>
+              <p><span lang="es">La ficha del cliente en Salesforce: una sola página, organizada en secciones, con toda la información que el ejecutivo necesita para responder en el menor tiempo posible y con la información más acertada. Fue el primer hito de la migración. La visión del directorio se bajó a un workshop de co-creación con Producto, Diseño y Experiencia: benchmark, ideas, un MVP de ficha y el modelo de gestión. Incluye productos activos, transacciones, tarjetas, préstamos, deuda, NPS/CSAT e historial de contactos, conectados al core bancario.</span><span lang="en">The customer profile in Salesforce: a single page, organized in sections, with everything an agent needs to answer as fast as possible and with the most accurate information. It was the first milestone of the migration. The board's vision was turned into a co-creation workshop with Product, Design and Customer Experience: benchmark, ideas, an MVP profile and the service model. It includes active products, transactions, cards, loans, debt, NPS/CSAT and contact history, connected to the core banking system.</span></p>
+            </div>
+            <figure class="fig peek" data-zoom="img/c2-ficha360.jpg"><img src="img/c2-ficha360.jpg" alt="Workshop ficha 360" style="object-position:0% 30%"><span class="cap"><span lang="es">Workshop de co-creación</span><span lang="en">Co-creation workshop</span></span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label">03 · <span lang="es">Motivos de contacto</span><span lang="en">Contact reasons</span></div>
+        <div>
+          <h3><span lang="es">Un modelo de atención con reglas claras.</span><span lang="en">A service model with clear rules.</span></h3>
+          <div class="split">
+            <div class="steps">
+              <div class="step"><span class="label"><span lang="es">Consulta</span><span lang="en">Inquiry</span></span><h4><span lang="es">Abre y cierra</span><span lang="en">Opened and closed</span></h4><p><span lang="es">La resuelve el ejecutivo en el primer contacto.</span><span lang="en">Solved by the agent at first contact.</span></p></div>
+              <div class="step"><span class="label"><span lang="es">Solicitud</span><span lang="en">Request</span></span><h4><span lang="es">Se gestiona</span><span lang="en">Handled</span></h4><p><span lang="es">Un pedido que el cliente no puede autogestionar.</span><span lang="en">Something the customer can't self-serve.</span></p></div>
+              <div class="step"><span class="label"><span lang="es">Reclamo</span><span lang="en">Complaint</span></span><h4><span lang="es">Se escala</span><span lang="en">Escalated</span></h4><p><span lang="es">Con dueño, SLA y procedimiento definidos.</span><span lang="en">With a defined owner, SLA and procedure.</span></p></div>
+            </div>
+            <div>
+              <p><span lang="es">~3 meses de relevamiento con Experiencia, Operaciones y áreas internas, producto por producto: onboarding, cuentas, tarjetas, préstamos, mora, reintegros. Cada motivo con su SLA, escalamientos en 1ra y 2da instancia, procedimientos y sistemas.</span><span lang="en">~3 months of mapping with Customer Experience, Operations and internal teams, product by product: onboarding, accounts, cards, loans, collections, cashback. Each reason with its SLA, 1st and 2nd level escalations, procedures and systems.</span></p>
+              <p style="margin-top:12px"><span lang="es">El relevamiento también expuso procesos internos lentos y abrió la puerta a automatizarlos.</span><span lang="en">The mapping also exposed slow internal processes and opened the door to automating them.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Resultado</span><span lang="en">Outcome</span></div>
+        <div>
+          <h3><span lang="es">Del Excel a la consola de Salesforce.</span><span lang="en">From spreadsheet to the Salesforce console.</span></h3>
+          <div class="tags"><span><span lang="es">Ficha 360° del cliente</span><span lang="en">360° customer view</span></span><span><span lang="es">Árbol de motivos de contacto</span><span lang="en">Contact reason tree</span></span><span><span lang="es">Estándares de SLA y escalamiento</span><span lang="en">SLA &amp; escalation standards</span></span><span><span lang="es">Site de consulta para ejecutivos</span><span lang="en">Agent reference site</span></span></div>
+          <p style="margin-top:18px"><span lang="es">El día del go-live, en el call center de Paraguay, las llamadas empezaron a entrar y a tipificarse en la consola de Gestión de Casos siguiendo el árbol diseñado. Estas bases sostuvieron después la expansión de Salesforce al resto del holding.</span><span lang="en">On go-live day at the Paraguay call center, calls started coming in and being classified in the Case Management console following the designed tree. These foundations later supported Salesforce's rollout to the rest of the holding.</span></p>
+        </div>
+      </div>
+
+      <div class="next-case" data-go="caso-03">
+        <div><div class="label" style="color:#A9A49A"><span lang="es">Siguiente</span><span lang="en">Next</span></div><h4><span lang="es">Caso 03: ¿CRM o backoffice?</span><span lang="en">Case 03: CRM or back office?</span></h4></div>
+        <span style="font-size:32px;color:var(--olive-soft)">→</span>
+      </div>
+    </div>
+    <div id="case-c3" class="case-pane" hidden>
+      <div class="case-head">
+        <div>
+          <div class="eyebrow"><span lang="es">Caso 03 · Service Designer · Core Enablers · ueno bank · 2025</span><span lang="en">Case 03 · Service Designer · Core Enablers · ueno bank · 2025</span></div>
+          <h1><span lang="es">¿CRM o backoffice? <span class="hl">Dónde vive cada necesidad.</span></span><span lang="en">CRM or back office? <span class="hl">Where each need lives.</span></span></h1>
+          <p class="lead"><span lang="es">Un discovery estratégico para ordenar la integración entre Salesforce y el backoffice del banco, y sus derivaciones en el onboarding de empresas.</span><span lang="en">A strategic discovery to shape the integration between Salesforce and the bank's back office, and what it revealed about business onboarding.</span></p>
+        </div>
+        <dl class="facts">
+          <div><dt class="label"><span lang="es">Rol</span><span lang="en">Role</span></dt><dd><span lang="es">Service Designer · Core Enablers (backoffice)</span><span lang="en">Service Designer · Core Enablers (back office)</span></dd></div>
+          <div><dt class="label"><span lang="es">Equipo</span><span lang="en">Team</span></dt><dd><span lang="es">En dupla con la service designer de Salesforce, junto a Producto y Operaciones de backoffice</span><span lang="en">Paired with the Salesforce service designer, alongside back-office Product and Operations</span></dd></div>
+          <div><dt class="label"><span lang="es">Método</span><span lang="en">Method</span></dt><dd><span lang="es">Mapeo de stakeholders, entrevistas, desk research y análisis de datos de Experiencia, Soporte TI y Operaciones</span><span lang="en">Stakeholder mapping, interviews, desk research and data analysis from CX, IT Support and Operations</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="bignums reveal">
+        <div class="bignum"><div class="n">+20</div><div class="bar"><span></span><span></span><span></span><span></span><span></span></div><div class="t"><span lang="es">stakeholders entrevistados</span><span lang="en">stakeholders interviewed</span></div></div>
+        <div class="bignum"><div class="n">+10</div><div class="bar"><span></span><span></span><span></span><span></span><span class="off"></span></div><div class="t"><span lang="es">equipos internos involucrados</span><span lang="en">internal teams involved</span></div></div>
+        <div class="bignum"><div class="n">3</div><div class="bar"><span></span><span></span><span></span></div><div class="t"><span lang="es">ejes: visiones, necesidades y escenarios</span><span lang="en">axes: visions, needs and scenarios</span></div></div>
+        <div class="bignum"><div class="n">4</div><div class="bar"><span></span><span></span><span></span><span></span></div><div class="t"><span lang="es">planos de integración propuestos</span><span lang="en">integration levels proposed</span></div></div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">El contexto</span><span lang="en">Context</span></div>
+        <div>
+          <div class="split">
+            <div>
+              <h3><span lang="es">"Necesitamos integrar." ¿Pero qué, para quién y cómo?</span><span lang="en">"We need to integrate." But what, for whom and how?</span></h3>
+              <p><span lang="es">La ficha 360° había salido a producción como MVP y cada equipo pedía conectar Salesforce con el backoffice. Antes de decidir, había que entender qué significaba "integrar": qué datos, qué funcionalidades, para qué usuarios y con qué sistemas.</span><span lang="en">The 360° customer view had launched as an MVP and every team wanted Salesforce connected to the back office. Before deciding, we needed to understand what "integrate" meant: which data, which features, for which users and with which systems.</span></p>
+            </div>
+            <figure class="fig peek" data-zoom="img/c3-front-back.jpg"><img src="img/c3-front-back.jpg" alt="Front office vs back office" style="object-position:50% 20%"><span class="cap">Front office × back office</span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Hallazgos</span><span lang="en">Findings</span></div>
+        <div>
+          <h3><span lang="es">Misma teoría, <span class="serif">implementaciones en silos.</span></span><span lang="en">Same theory, <span class="serif">siloed implementations.</span></span></h3>
+          <p><span lang="es">Todos coincidían en la diferencia entre CRM y backoffice. La desconexión estaba en cómo cada equipo resolvía sus necesidades.</span><span lang="en">Everyone agreed on the difference between CRM and back office. The disconnect was in how each team solved its own needs.</span></p>
+          <div class="split">
+            <div class="findings">
+              <div class="finding"><span class="k">01</span><h4><span lang="es">Salesforce como ticketera interna</span><span lang="en">Salesforce as an internal ticketing tool</span></h4><p><span lang="es">Flujos de backoffice sin E2E se completaban con tickets entre áreas.</span><span lang="en">Back-office flows without an end-to-end were patched with tickets between teams.</span></p></div>
+              <div class="finding"><span class="k">02</span><h4><span lang="es">Ventas como backoffice</span><span lang="en">Sales as a back office</span></h4><p><span lang="es">El onboarding de empresas corría en la consola de ventas, con áreas internas operando ahí.</span><span lang="en">Business onboarding ran in the sales console, with internal teams operating there.</span></p></div>
+              <div class="finding"><span class="k">03</span><h4><span lang="es">Backoffices "caseros"</span><span lang="en">Home-made back offices</span></h4><p><span lang="es">Equipos que armaban sus propias herramientas para reducir carga manual y escalamientos.</span><span lang="en">Teams building their own tools to cut manual work and escalations.</span></p></div>
+            </div>
+            <figure class="fig peek" data-zoom="img/c3-ecosystem.jpg"><img src="img/c3-ecosystem.jpg" alt="Ecosystem map" style="object-position:50% 40%"><span class="cap">Ecosystem map · front &amp; back office</span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Escenarios</span><span lang="en">Scenarios</span></div>
+        <div>
+          <h3><span lang="es">4 planos de integración, de menor a mayor complejidad.</span><span lang="en">4 integration levels, from lower to higher complexity.</span></h3>
+          <div class="ladder" style="max-width:none">
+            <div><b>1</b><span lang="es">Visualizar info del cliente · Experiencia</span><span lang="en">View customer info · CX</span></div>
+            <div><b>2</b><span lang="es">Reportes y comprobantes · Experiencia</span><span lang="en">Reports &amp; receipts · CX</span></div>
+            <div><b>3</b><span lang="es">Automatizar entre backoffices · Experiencia y áreas internas</span><span lang="en">Automate across back offices · CX &amp; internal teams</span></div>
+            <div><b>4</b><span lang="es">Habilitar gestiones internas · Áreas internas</span><span lang="en">Enable internal workflows · Internal teams</span></div>
+          </div>
+          <p style="margin-top:16px"><span lang="es">Impacto buscado: menos tiempos de respuesta, menos escalamientos y herramientas centralizadas, sin convertir Salesforce en un monolito.</span><span lang="en">Target impact: shorter response times, fewer escalations and centralized tools, without turning Salesforce into a monolith.</span></p>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Caso testigo</span><span lang="en">Test case</span></div>
+        <div>
+          <div class="split">
+            <div>
+              <h3><span lang="es">Onboarding de empresas: roles y permisos.</span><span lang="en">Business onboarding: roles and permissions.</span></h3>
+              <p><span lang="es">Al mapear el flujo de onboarding de empresas para definir roles y permisos, apareció el mismo patrón: la gestión vivía en la consola de ventas, aunque buena parte del recorrido correspondía a áreas internas. ¿Dónde debía estar el seguimiento completo? ¿Dónde tenían que operar las áreas internas?</span><span lang="en">Mapping the business onboarding flow to define roles and permissions revealed the same pattern: the process lived in the sales console, even though much of the journey belonged to internal teams. Where should end-to-end tracking live? Where should internal teams operate?</span></p>
+            </div>
+            <figure class="fig peek" data-zoom="img/c3-onb-empresas.jpg"><img src="img/c3-onb-empresas.jpg" alt="Onboarding empresas" style="object-position:50% 0%"><span class="cap"><span lang="es">Onboarding empresas · CRM vs backoffice</span><span lang="en">Business onboarding · CRM vs back office</span></span></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="block reveal">
+        <div class="label"><span lang="es">Resultado</span><span lang="en">Outcome</span></div>
+        <div>
+          <h3><span lang="es">Una base para decidir el roadmap de integraciones.</span><span lang="en">A foundation for the integration roadmap.</span></h3>
+          <div class="tags"><span><span lang="es">Alcance, usuarios y casos de uso por herramienta</span><span lang="en">Scope, users and use cases per tool</span></span><span><span lang="es">Toolkit de decisión</span><span lang="en">Decision toolkit</span></span><span><span lang="es">Mesa técnica</span><span lang="en">Technical roundtable</span></span><span><span lang="es">Roadmaps alineados BO · CRM · Operaciones</span><span lang="en">Aligned BO · CRM · Ops roadmaps</span></span></div>
+          <p style="margin-top:18px"><span lang="es">El discovery le dio a Producto, Tecnología y Operaciones los escenarios y criterios para priorizar las integraciones de mediano y largo plazo.</span><span lang="en">The discovery gave Product, Tech and Operations the scenarios and criteria to prioritize mid- and long-term integrations.</span></p>
+        </div>
+      </div>
+
+      <div class="next-case" data-go="liderazgo">
+        <div><div class="label" style="color:#A9A49A"><span lang="es">Siguiente</span><span lang="en">Next</span></div><h4><span lang="es">Liderazgo: llevar Service Design a 6 negocios</span><span lang="en">Leadership: bringing Service Design to 6 businesses</span></h4></div>
+        <span style="font-size:32px;color:var(--olive-soft)">→</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MÁS PROYECTOS ================= -->
+<div class="view" id="v-mas-proyectos">
+  <div class="wrap">
+    <section style="padding-top:64px">
+      <div class="sec-head">
+        <div><div class="eyebrow"><span lang="es">Más proyectos</span><span lang="en">More projects</span></div>
+        <h2 class="big" style="margin-top:12px"><span lang="es">Otros trabajos, en corto.</span><span lang="en">Other work, in short.</span></h2></div>
+        <p class="lead" style="max-width:420px"><span lang="es">Intervenciones más acotadas que sumaron valor al servicio.</span><span lang="en">Smaller interventions that added value to the service.</span></p>
+      </div>
+      <div class="more-list">
+        <article class="mp reveal">
+          <div class="mp-meta"><span class="label">ueno bank · 2024</span><span class="label">Care &amp; Comms</span></div>
+          <div>
+            <h4><span lang="es">Fusión con Visión Banco: del papel a lo digital</span><span lang="en">Merger with Visión Banco: from paper to digital</span></h4>
+            <p><span lang="es">Un banco digital absorbía a un banco con más de 30 años de historia y una red de casi 70 sucursales, con buena parte de su operación en papel. Trabajo de campo junto a otras service designers, desde el anuncio en enero hasta la apertura de las sucursales como ueno, el 28 de junio de 2024.</span><span lang="en">A digital bank was absorbing a bank with 30+ years of history and nearly 70 branches, much of its operation still on paper. Fieldwork alongside other service designers, from the January announcement to the branches reopening as ueno on June 28, 2024.</span></p>
+            <div class="mp-steps">
+              <div><b>01</b><h5><span lang="es">Relevar en campo</span><span lang="en">Field research</span></h5><p><span lang="es">Shadowing y entrevistas a tesoreros y cajeros: sistemas, arqueos de caja, cheques, CDA y la papelería manual.</span><span lang="en">Shadowing and interviews with treasurers and tellers: systems, cash counts, checks, term deposits and paper forms.</span></p></div>
+              <div><b>02</b><h5><span lang="es">Mapear casuísticas</span><span lang="en">Map the cases</span></h5><p><span lang="es">Service blueprints del as is para que Producto diseñara el to be digital.</span><span lang="en">As-is service blueprints so Product could design the digital to-be.</span></p></div>
+              <div><b>03</b><h5><span lang="es">Acompañar la apertura</span><span lang="en">Support the launch</span></h5><p><span lang="es">Contingencias in situ (orquestación de sucursal, efectivo, cajas y cajeros) y service safari ayudando a clientes a pasarse a la app.</span><span lang="en">On-site contingencies (branch flow, cash, tellers and ATMs) and service safari helping customers move to the app.</span></p></div>
+            </div>
+            <p class="mp-res"><span lang="es"><b>Resultado:</b> lo observado en sucursal volvía cada día al equipo de onboarding, y la app se fue mejorando durante la semana de apertura.</span><span lang="en"><b>Outcome:</b> what we saw in branches went back to the onboarding team every day, improving the app throughout launch week.</span></p>
+          </div>
+        </article>
+        <article class="mp reveal">
+          <div class="mp-meta"><span class="label">ueno bank · 2024</span><span class="label">Care &amp; Comms</span></div>
+          <div>
+            <h4><span lang="es">Incidentes masivos y tribu ágil</span><span lang="en">Major incidents and agile tribe</span></h4>
+            <p><span lang="es">Cuando algo fallaba a gran escala, cada área reaccionaba por su cuenta. Junto a Tecnología se diseñó el servicio de gestión de incidentes, y en paralelo se armó una tribu ágil para que los casos de prioridad alta se resolvieran primero.</span><span lang="en">When something failed at scale, each team reacted on its own. Together with Tech, we designed the incident management service, and in parallel set up an agile tribe so high-priority cases were solved first.</span></p>
+            <div class="mp-steps">
+              <div><b>01</b><h5><span lang="es">Mapear el circuito</span><span lang="en">Map the flow</span></h5><p><span lang="es">Actores, procesos, canales y herramientas, desde la alerta hasta el post-mortem.</span><span lang="en">Actors, processes, channels and tools, from alert to post-mortem.</span></p></div>
+              <div><b>02</b><h5>Service blueprint</h5><p><span lang="es">Un circuito documentado y compartido entre Experiencia y Tecnología.</span><span lang="en">A documented flow shared by CX and Tech.</span></p></div>
+              <div><b>03</b><h5><span lang="es">Tribu ágil</span><span lang="en">Agile tribe</span></h5><p><span lang="es">Casos críticos escalados de Zendesk a Jira para que Tecnología respondiera más rápido.</span><span lang="en">Critical cases escalated from Zendesk to Jira so Tech could respond faster.</span></p></div>
+            </div>
+          </div>
+        </article>
+        <article class="mp mp-wip reveal">
+          <div class="mp-meta"><span class="label">ueno bank · 2025</span><span class="label">Core Enablers</span></div>
+          <div><h4><span lang="es">Onboarding de empresas: roles y permisos</span><span lang="en">Business onboarding: roles and permissions</span></h4><p><span lang="es">WIP · Próximamente</span><span lang="en">WIP · Coming soon</span></p></div>
+        </article>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ================= LIDERAZGO ================= -->
+<div class="view" id="v-liderazgo">
+  <div class="wrap">
+    <div class="case-head">
+      <div>
+        <div class="eyebrow">Service Design Manager · itti, Grupo Vázquez · 2025–2026</div>
+        <h1><span lang="es">Llevar la disciplina <span class="hl">más allá del banco.</span></span><span lang="en">Taking the practice <span class="hl">beyond the bank.</span></span></h1>
+        <p class="lead"><span lang="es">Un equipo de hasta 8 personas, armado desde cero, para llevar Service Design a los negocios no financieros del grupo.</span><span lang="en">A team of up to 8 people, built from scratch, to bring Service Design to the group's non-financial businesses.</span></p>
+      </div>
+      <dl class="facts">
+        <div><dt class="label"><span lang="es">Equipo</span><span lang="en">Team</span></dt><dd><span lang="es">Hasta 8 service designers</span><span lang="en">Up to 8 service designers</span></dd></div>
+        <div><dt class="label"><span lang="es">Trabajo con</span><span lang="en">Worked with</span></dt><dd><span lang="es">VPs y Heads de Producto, Tecnología y Operaciones</span><span lang="en">VPs and Heads of Product, Tech and Operations</span></dd></div>
+        <div><dt class="label"><span lang="es">Alcance</span><span lang="en">Scope</span></dt><dd><span lang="es">6 negocios</span><span lang="en">6 businesses</span></dd></div>
+      </dl>
+    </div>
+
+    <div class="block reveal">
+      <div class="label"><span lang="es">Dónde</span><span lang="en">Where</span></div>
+      <div>
+        <h3><span lang="es">Un equipo, seis contextos de negocio.</span><span lang="en">One team, six business contexts.</span></h3>
+        <div class="biz">
+          <div><b>Monchis</b><span lang="es">Delivery de comida</span><span lang="en">Food delivery</span></div>
+          <div><b>MUV</b><span lang="es">Movilidad</span><span lang="en">Mobility</span></div>
+          <div><b>ubox</b><span lang="es">Paquetería y compras al exterior</span><span lang="en">Parcels & cross-border shopping</span></div>
+          <div><b>D&amp;E</b><span lang="es">Ticketing y Smart Venues</span><span lang="en">Ticketing & Smart Venues</span></div>
+          <div><b>umarket</b><span>Marketplace</span></div>
+          <div><b>Loyalty</b><span lang="es">Beneficios ueno bank</span><span lang="en">ueno bank rewards</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block reveal">
+      <div class="label"><span lang="es">El rol</span><span lang="en">The role</span></div>
+      <div>
+        <h3><span lang="es">Del equipo a la estrategia.</span><span lang="en">From team to strategy.</span></h3>
+        <div class="lead-grid">
+          <div class="lcard"><span class="label">01</span><h4><span lang="es">Armar el equipo</span><span lang="en">Building the team</span></h4><p><span lang="es">Definición de perfiles, selección y asignación de cada persona al negocio que mejor le calzaba.</span><span lang="en">Defining profiles, hiring and matching each person to the right business.</span></p></div>
+          <div class="lcard"><span class="label">02</span><h4><span lang="es">Instalar la disciplina</span><span lang="en">Embedding the practice</span></h4><p><span lang="es">Entender cada negocio, sus necesidades y dónde Service Design podía generar más impacto.</span><span lang="en">Understanding each business, its needs and where Service Design could create the most impact.</span></p></div>
+          <div class="lcard"><span class="label">03</span><h4><span lang="es">Un lugar en la mesa estratégica</span><span lang="en">A seat at the strategy table</span></h4><p><span lang="es">Espacios con VPs y Heads para definir líneas estratégicas, planificación de equipos y way of working.</span><span lang="en">Sessions with VPs and Heads to define strategic lines, team planning and ways of working.</span></p></div>
+        </div>
+        <div class="process">
+          <div>Discovery</div><div><span lang="es">Definición</span><span lang="en">Definition</span></div><div><span lang="es">Ideación</span><span lang="en">Ideation</span></div><div><span lang="es">Prototipo</span><span lang="en">Prototype</span></div><div>Handoff · <span lang="es">Pruebas</span><span lang="en">Testing</span></div>
+        </div>
+        <figcaption><span lang="es">Acompañamiento en todo el proceso, de la estrategia al handoff con Product Design.</span><span lang="en">Support through the whole process, from strategy to handoff with Product Design.</span></figcaption>
+      </div>
+    </div>
+
+    <div class="block reveal">
+      <div class="label"><span lang="es">Forma de liderar</span><span lang="en">Leadership style</span></div>
+      <div>
+        <h3><span lang="es">Confianza y autonomía, <span class="serif">con rigor</span>.</span><span lang="en">Trust and autonomy, <span class="serif">with rigor</span>.</span></h3>
+        <p><span lang="es">Autonomía para que cada persona lleve sus proyectos, con instancias de revisión que aseguran el rigor metodológico: del diseño del research al trabajo de campo.</span><span lang="en">Autonomy for each person to own their projects, with review moments that ensure methodological rigor, from research design to fieldwork.</span></p>
+        <div class="wip-box">
+          <span class="label" style="color:var(--olive)">WIP · <span lang="es">En construcción</span><span lang="en">In progress</span></span>
+          <p style="margin-top:8px"><span lang="es">Próximamente: proyectos destacados del equipo y aprendizajes de liderazgo.</span><span lang="en">Coming soon: highlighted team projects and leadership learnings.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SOBRE MÍ ================= -->
+<div class="view" id="v-sobre-mi">
+  <div class="wrap">
+    <section style="padding-bottom:0">
+      <div class="about">
+        <div>
+          <div class="about-photo"><img src="img/paula.png" alt="Paula Falco"></div>
+          <div class="quote reveal">
+            <span class="q">“</span>
+            <h3><span lang="es">Es imposible no comunicar.</span><span lang="en">One cannot not communicate.</span></h3>
+            <p><span lang="es">Una idea de la carrera de Comunicación Social que sigue guiando el trabajo: todo comunica, y cada experiencia también. Por eso cada servicio, producto o flujo, digital o físico, pone a las personas en el centro.</span><span lang="en">An idea from studying Communication that still guides the work: everything communicates, and so does every experience. That's why every service, product or flow, digital or physical, puts people at the center.</span></p>
+            <cite>— PAUL WATZLAWICK</cite>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="eyebrow"><span lang="es">Sobre mí</span><span lang="en">About me</span></div>
+          <div class="about-name" style="margin-top:14px">Paula<br>Falco</div>
+          <p><span lang="es">Un recorrido que empezó en <strong>comunicación, PR y relaciones institucionales</strong>, con equipos a cargo y la estrategia de reputación de Naranja, incluido el lanzamiento de Naranja X.</span><span lang="en">A path that began in <strong>communications, PR and public affairs</strong>, leading teams and Naranja's reputation strategy, including the launch of Naranja X.</span></p>
+          <p><span lang="es">La empatía del diseño de servicios marcó el siguiente paso: la formación en <strong>Human-Centered Service Design en IDEO</strong> y el salto a UX, primero en Naranja X, después en ueno bank y luego como <strong>Service Design Manager</strong>.</span><span lang="en">The empathy of service design marked the next step: training in <strong>Human-Centered Service Design at IDEO</strong> and the move into UX, first at Naranja X, then at ueno bank, and later as <strong>Service Design Manager</strong>.</span></p>
+          <p><span lang="es">Lo que más motiva: equipos que piensan las cosas desde cero y un trabajo que contribuye a algo más grande que un proyecto.</span><span lang="en">What drives the work: teams that rethink things from scratch, and contributing to something bigger than a project.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cols">
+      <div>
+        <div class="label" style="margin-bottom:14px"><span lang="es">Trayectoria</span><span lang="en">Experience</span></div>
+        <div class="tl">
+          <div class="tl-item reveal"><div class="d">2025 — 2026</div><div><h4>Service Design Manager</h4><span class="co">itti, Grupo Vázquez</span></div></div>
+          <div class="tl-item reveal"><div class="d">2023 — 2025</div><div><h4>SR Service Designer</h4><span class="co">itti · ueno bank</span></div></div>
+          <div class="tl-item reveal"><div class="d">2021 — 2023</div><div><h4>Service Designer Ssr. → Sr., UX</h4><span class="co">Naranja X</span></div></div>
+          <div class="tl-item reveal"><div class="d">2020 — 2021</div><div><h4>Business Analyst, <span lang="es">Adquirencia</span><span lang="en">Acquiring</span></h4><span class="co">Naranja X</span></div></div>
+          <div class="tl-item reveal"><div class="d">2018 — 2020</div><div><h4><span lang="es">Líder Brand PR · Relaciones Institucionales</span><span lang="en">Brand PR Lead · Public Affairs</span></h4><span class="co">Naranja</span></div></div>
+          <div class="tl-item reveal"><div class="d">2012 — 2018</div><div><h4><span lang="es">Senior de Relaciones Institucionales y Prensa</span><span lang="en">Senior Public Affairs &amp; Press</span></h4><span class="co">Naranja</span></div></div>
+          <div class="tl-item reveal"><div class="d">2009 — 2012</div><div><h4><span lang="es">RR. HH., Capacitaciones</span><span lang="en">HR, Training</span></h4><span class="co">Tarjeta Naranja</span></div></div>
+        </div>
+      </div>
+      <div class="side">
+        <h5 class="label"><span lang="es">Formación</span><span lang="en">Education</span></h5>
+        <ul>
+          <li><span lang="es">Lic. en Comunicación Social</span><span lang="en">BA in Social Communication</span><small>Universidad Nacional de Córdoba</small></li>
+          <li><span lang="es">Posgrado en Psicología Empresarial y Organizacional</span><span lang="en">Postgraduate in Business & Organizational Psychology</span><small>Universidad de Belgrano</small></li>
+        </ul>
+        <h5 class="label"><span lang="es">Certificaciones</span><span lang="en">Certifications</span></h5>
+        <ul>
+          <li>Human-Centered Service Design<small>IDEO · 2022</small></li>
+          <li>UX Research<small>Coderhouse · 2023</small></li>
+          <li>Product Owner – Technician<small>Scrum Manager® · 2019</small></li>
+        </ul>
+        <h5 class="label"><span lang="es">Idiomas</span><span lang="en">Languages</span></h5>
+        <ul>
+          <li><span lang="es">Español · Nativo</span><span lang="en">Spanish · Native</span></li>
+          <li><span lang="es">Inglés · Avanzado</span><span lang="en">English · Advanced</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CONTACTO ================= -->
+<div class="view" id="v-contacto">
+  <div class="wrap contact">
+    <div class="eyebrow"><span lang="es">Hablemos</span><span lang="en">Let's talk</span></div>
+    <p class="lead" style="margin-top:14px"><span lang="es">Abierta a nuevos desafíos de liderazgo en estrategia de experiencia, UX, CX y producto. El Service Design fue el puente: trabajar codo a codo con líderes de Producto y Tecnología para definir la visión, priorizar y llevarla a la operación. Remoto o híbrido, con disponibilidad para días de oficina en Córdoba, Buenos Aires u otras ciudades.</span><span lang="en">Open to new leadership challenges in experience strategy, UX, CX and product. Service Design was the bridge: working side by side with Product and Tech leaders to shape the vision, prioritize and bring it to operations. Remote or hybrid, available for office days in Córdoba, Buenos Aires or other cities.</span></p>
+    <a class="contact-big" href="mailto:pau.falco@gmail.com" style="text-decoration:none"><span><span lang="es">Contacto</span><span lang="en">Contact</span></span><span class="arrow">↘</span></a>
+    <div class="contact-grid">
+      <div><div class="label">Email</div><a href="mailto:pau.falco@gmail.com">pau.falco@gmail.com</a></div>
+      <div><div class="label">LinkedIn</div><a href="https://www.linkedin.com/in/paula-falco-" target="_blank" rel="noopener">linkedin.com/in/paula-falco-</a></div>
+      <div><div class="label"><span lang="es">Modalidad</span><span lang="en">Work mode</span></div><div><span lang="es">Remoto · Híbrido (Córdoba, Buenos Aires y más)</span><span lang="en">Remote · Hybrid (Córdoba, Buenos Aires and beyond)</span></div></div>
+    </div>
+    <footer><span>© 2026 Paula Falco</span><span><span lang="es">Diseñado con foco en las personas</span><span lang="en">Designed with people in mind</span></span></footer>
+  </div>
+</div>
+</main>
+
+<div class="lb" id="lb"><span class="x">ESC · <span lang="es">cerrar</span><span lang="en">close</span></span><img alt=""></div>
+</div>
+
+<script>
+(function(){
+  const views=['inicio','casos','mas-proyectos','liderazgo','sobre-mi','contacto'];
+  function show(name){
+    let c=null;
+    if(name==='caso-01'){c='c1';name='casos';}
+    if(name==='caso-02'){c='c2';name='casos';}
+    if(name==='caso-03'){c='c3';name='casos';}
+    if(name==='casos' && !c) c='c1';
+    if(c){document.querySelectorAll('.case-pane').forEach(p=>p.hidden=(p.id!=='case-'+c));
+      document.querySelectorAll('.ctab[data-case]').forEach(t=>t.classList.toggle('active',t.dataset.case===c));}
+    if(!views.includes(name)) name='inicio';
+    document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='v-'+name));
+    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.go===name));
+    document.getElementById('tabs').classList.remove('open');
+    window.scrollTo({top:0});
+    observe();
+  }
+  function go(name){ if(location.hash!=='#'+name) location.hash=name; else show(name); }
+  window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+  document.addEventListener('click',e=>{
+    const el=e.target.closest('[data-go]');
+    if(el){ e.preventDefault(); go(el.dataset.go); }
+    const z=e.target.closest('[data-zoom]');
+    if(z){ const lb=document.getElementById('lb'); lb.querySelector('img').src=z.dataset.zoom; lb.classList.add('on'); }
+  });
+  document.getElementById('lb').addEventListener('click',function(){this.classList.remove('on')});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('on')});
+  document.getElementById('burger').addEventListener('click',()=>document.getElementById('tabs').classList.toggle('open'));
+  document.querySelectorAll('.ctab.locked').forEach(b=>b.addEventListener('click',()=>{b.animate([{transform:'translateX(0)'},{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],{duration:260})}));
+
+  // idioma
+  function setLang(l){
+    document.documentElement.dataset.lang=l; document.documentElement.lang=l;
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+    try{localStorage.setItem('pf-lang',l)}catch(_){}
+  }
+  document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
+  try{const s=localStorage.getItem('pf-lang'); if(s) setLang(s);}catch(_){}
+
+  // header y animaciones
+  window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('scrolled',scrollY>10));
+  let io;
+  function observe(){
+    if(io) io.disconnect();
+    io=new IntersectionObserver(es=>es.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('in');
+        en.target.querySelectorAll('.count').forEach(c=>{ if(c.dataset.done) return; c.dataset.done=1;
+          const to=+c.dataset.to; let n=0; c.textContent=0; const st=Math.max(1,Math.round(to/24));
+          const t=setInterval(()=>{n=Math.min(to,n+st); c.textContent=n; if(n>=to)clearInterval(t)},40);});
+        io.unobserve(en.target);}
+    }),{threshold:.12});
+    document.querySelectorAll('.view.active .reveal:not(.in)').forEach(el=>io.observe(el));
+  }
+  show(location.hash.slice(1)||'inicio');
+})();
+</script>
+</body>
+</html>
