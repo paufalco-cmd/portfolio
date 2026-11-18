@@ -203,6 +203,15 @@ details.more li{margin-bottom:8px}
 .mp-steps p{font-size:14px}
 .lead-card{grid-column:span 2;min-height:240px}
 .fb-grid{grid-template-columns:repeat(3,1fr)}
+.recs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+.rec{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;position:relative}
+.rec:first-child{grid-column:span 2;background:var(--dark);color:#EDEAE2;border-color:var(--dark)}
+.rec:first-child blockquote{font-size:22px;color:#fff}
+.rec:first-child figcaption span{color:#BFBAAE}
+.rec blockquote{font-family:var(--serif);font-size:19px;line-height:1.35;letter-spacing:-.005em}
+.rec figcaption{display:flex;flex-direction:column;gap:2px;font-size:13.5px;color:var(--muted);margin:0}
+.rec figcaption b{font-weight:500;font-size:14.5px;color:inherit}
+.rec:first-child figcaption b{color:var(--olive-soft)}
 /* liderazgo */
 .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .lcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
@@ -270,7 +279,8 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
   .cases{grid-template-columns:1fr}
   .card.featured,.lead-card{grid-column:span 1;grid-template-columns:1fr}
   .block{grid-template-columns:1fr;gap:10px}
-  .findings,.steps,.lead-grid,.contact-grid,.split,.mp{grid-template-columns:1fr}
+  .findings,.steps,.lead-grid,.contact-grid,.split,.mp,.recs{grid-template-columns:1fr}
+  .rec:first-child{grid-column:span 1}
   .ladder{flex-wrap:wrap}.mp-steps{grid-template-columns:1fr}.ladder div{flex:1 1 45%}
   .step{border-right:0;border-bottom:1px solid var(--line)}
   .biz{grid-template-columns:repeat(2,1fr)}
@@ -796,7 +806,7 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
           <div class="lcard"><span class="label">03</span><h4><span lang="es">Priorizar el roadmap</span><span lang="en">Prioritizing the roadmap</span></h4><p><span lang="es">Codo a codo con VPs y Heads de Producto: visión de corto, mediano y largo plazo, planificación y priorización del roadmap.</span><span lang="en">Side by side with Product VPs and Heads: short, mid and long-term vision, planning and roadmap prioritization.</span></p></div>
           <div class="lcard"><span class="label">04</span><h4><span lang="es">Estandarizar el PDLC</span><span lang="en">Standardizing the PDLC</span></h4><p><span lang="es">Un ciclo de desarrollo de producto común, con etapas y entregables claros para cada equipo.</span><span lang="en">A shared product development lifecycle, with clear stages and deliverables for every team.</span></p></div>
           <div class="lcard"><span class="label">05</span><h4><span lang="es">Liderazgo generalista de diseño</span><span lang="en">Generalist design leadership</span></h4><p><span lang="es">La transición a liderar también content, product design y research, además de service design.</span><span lang="en">The transition to also leading content, product design and research, alongside service design.</span></p></div>
-          <div class="lcard"><span class="label">06</span><h4><span lang="es">Confianza y autonomía</span><span lang="en">Trust and autonomy</span></h4><p><span lang="es">Cada persona lleva sus proyectos, con instancias de revisión que aseguran el rigor metodológico.</span><span lang="en">Each person owns their projects, with review moments that ensure methodological rigor.</span></p></div>
+          <div class="lcard"><span class="label">06</span><h4><span lang="es">Confianza y autonomía</span><span lang="en">Trust and autonomy</span></h4><p><span lang="es">Más preguntas que respuestas: cada persona lleva sus proyectos, con instancias de revisión que aseguran el rigor metodológico.</span><span lang="en">More questions than answers: each person owns their projects, with review moments that ensure methodological rigor.</span></p></div>
         </div>
         <div class="process">
           <div>Discovery</div><div><span lang="es">Definición</span><span lang="en">Definition</span></div><div><span lang="es">Ideación</span><span lang="en">Ideation</span></div><div><span lang="es">Prototipo</span><span lang="en">Prototype</span></div><div>Handoff · <span lang="es">Pruebas</span><span lang="en">Testing</span></div>
@@ -805,6 +815,20 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
       </div>
     </div>
 
+    <div class="block reveal">
+      <div class="label"><span lang="es">Lo que dice el equipo</span><span lang="en">What the team says</span></div>
+      <div>
+        <h3><span lang="es">Recomendaciones en LinkedIn.</span><span lang="en">LinkedIn recommendations.</span></h3>
+        <div class="recs">
+          <figure class="rec reveal"><blockquote><span lang="es">“Algo que valoro especialmente de su liderazgo es la confianza que deposita en las personas, dándote autonomía y las herramientas necesarias para que puedas desarrollarte, tomar decisiones y crecer profesionalmente.”</span><span lang="en">“Something I especially value about her leadership is the trust she places in people, giving you autonomy and the tools you need to develop, make decisions and grow professionally.”</span></blockquote><figcaption><b>Jean Paul Venegas López</b><span>Ssr Service Designer · itti</span><span lang="es">Paula fue su manager</span><span lang="en">Paula was his manager</span></figcaption></figure>
+          <figure class="rec reveal"><blockquote><span lang="es">“Lo que más valoro es que no te da las respuestas, sino que te ayuda a encontrar el camino para llegar a la meta y te da espacio para proponer y crecer.”</span><span lang="en">“What I value most is that she doesn't give you the answers; she helps you find the way to the goal and gives you room to propose and grow.”</span></blockquote><figcaption><b>Jessica Giovanna Quiroga Quirós</b><span>Service Designer · Monchis</span><span lang="es">Paula fue su líder directa</span><span lang="en">Paula was her direct lead</span></figcaption></figure>
+          <figure class="rec reveal"><blockquote><span lang="es">“Hace más preguntas correctas, te acompaña para que crezcas y lidera de forma natural, sin esfuerzos.”</span><span lang="en">“She asks the right questions, supports you as you grow and leads naturally, effortlessly.”</span></blockquote><figcaption><b>Agustina Chavarini</b><span>Ssr. Service Designer · itti</span><span lang="es">Dupla y luego su manager</span><span lang="en">Peer, then her manager</span></figcaption></figure>
+          <figure class="rec reveal"><blockquote><span lang="es">“Es una profesional muy ambiciosa pero terrenal, dedicada, exigente sin perder la cuota de cercanía y calidez que se necesita.”</span><span lang="en">“A very ambitious yet grounded professional, dedicated and demanding without losing the closeness and warmth a team needs.”</span></blockquote><figcaption><b>Emilia Lodigiani</b><span>Service Designer · itti</span><span lang="es">Compañera y luego parte de su equipo</span><span lang="en">Peer, then part of her team</span></figcaption></figure>
+          <figure class="rec reveal"><blockquote><span lang="es">“Pau es pragmática, hace las preguntas necesarias e incómodas para desafiar el status quo y proponer planes de acción concretos y medibles.”</span><span lang="en">“Pau is pragmatic; she asks the necessary, uncomfortable questions to challenge the status quo and propose concrete, measurable action plans.”</span></blockquote><figcaption><b>Liliana Orjuela</b><span>Human Centered Design · Customer Experience</span><span lang="es">Trabajaron en equipos distintos</span><span lang="en">Worked on different teams</span></figcaption></figure>
+        </div>
+        <p style="margin-top:16px;font-size:14px"><span lang="es">Fragmentos de recomendaciones públicas, con nombre y cargo tal como figuran en LinkedIn.</span><span lang="en">Excerpts from public recommendations, originally in Spanish; names and roles as shown on LinkedIn.</span> <a href="https://www.linkedin.com/in/paula-falco-/details/recommendations/" target="_blank" rel="noopener" style="color:var(--olive);font-weight:500"><span lang="es">Leer las recomendaciones completas en LinkedIn →</span><span lang="en">Read the full recommendations on LinkedIn →</span></a></p>
+      </div>
+    </div>
     <div class="block reveal">
       <div class="label"><span lang="es">Frontstage y backstage</span><span lang="en">Frontstage &amp; backstage</span></div>
       <div>
