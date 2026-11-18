@@ -202,6 +202,7 @@ details.more li{margin-bottom:8px}
 .mp-steps h5{font-size:16px;font-weight:500;margin:6px 0 4px}
 .mp-steps p{font-size:14px}
 .lead-card{grid-column:span 2;min-height:240px}
+.fb-grid{grid-template-columns:repeat(3,1fr)}
 /* liderazgo */
 .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .lcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
@@ -808,10 +809,12 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
       <div class="label"><span lang="es">Frontstage y backstage</span><span lang="en">Frontstage &amp; backstage</span></div>
       <div>
         <h3><span lang="es">Lo que ve el cliente y todo lo que pasa detrás.</span><span lang="en">What customers see, and everything behind it.</span></h3>
-        <div class="findings">
-          <div class="finding"><span class="k">Monchis</span><h4><span lang="es">Propinas y promociones</span><span lang="en">Tips and promotions</span></h4><p><span lang="es">Rediseñamos la experiencia de propinas y promociones de punta a punta.</span><span lang="en">We redesigned the tips and promotions experience end to end.</span></p></div>
-          <div class="finding"><span class="k">muv</span><h4><span lang="es">Reserva de pasajeros y drivers</span><span lang="en">Rider and driver booking</span></h4><p><span lang="es">Trabajo de campo en Paraguay para detectar fricciones y deuda técnica de diseño y tecnología.</span><span lang="en">Fieldwork in Paraguay to surface friction and design and tech debt.</span></p></div>
-          <div class="finding"><span class="k">umarket</span><h4><span lang="es">Backoffice de órdenes</span><span lang="en">Order back office</span></h4><p><span lang="es">Diseñamos la gestión de órdenes y la experiencia de los proveedores logísticos.</span><span lang="en">We designed order management and the logistics providers' experience.</span></p></div>
+        <div class="findings fb-grid">
+          <div class="finding"><span class="k">Monchis · delivery</span><h4><span lang="es">Propinas, order tracking y promociones</span><span lang="en">Tips, order tracking and promotions</span></h4><p><span lang="es">Evolución de los flujos in-app de propinas, seguimiento del pedido y promociones.</span><span lang="en">Evolving the in-app flows for tips, order tracking and promotions.</span></p></div>
+          <div class="finding"><span class="k">muv · <span lang="es">movilidad</span><span lang="en">mobility</span></span><h4><span lang="es">Flujos de pasajeros y conductores</span><span lang="en">Rider and driver flows</span></h4><p><span lang="es">Mapeo y evolución de los flujos in-app de ambos lados, con trabajo de campo en Paraguay para detectar fricciones y deuda técnica.</span><span lang="en">Mapping and evolving in-app flows on both sides, with fieldwork in Paraguay to surface friction and tech debt.</span></p></div>
+          <div class="finding"><span class="k">ubox · <span lang="es">paquetería</span><span lang="en">parcels</span></span><h4>Cross-docking end to end</h4><p><span lang="es">Mapeo del proceso para acortar los tiempos entre la llegada del paquete al centro de distribución y su retiro en sucursal.</span><span lang="en">Mapping the process to cut the time between a parcel reaching the distribution center and its pickup at a branch.</span></p></div>
+          <div class="finding"><span class="k">umarket · e-commerce</span><h4><span lang="es">La orden, del front al backoffice</span><span lang="en">The order, from front to back office</span></h4><p><span lang="es">La experiencia de la orden, el montaje del backoffice y las integraciones con proveedores logísticos.</span><span lang="en">The order experience, the back-office setup and integrations with logistics providers.</span></p></div>
+          <div class="finding"><span class="k">tuti · ticketing</span><h4><span lang="es">Compra y descarga de tickets</span><span lang="en">Ticket purchase and download</span></h4><p><span lang="es">El flujo de compra y descarga en la ticketera, más el mapeo del backoffice y la evolución de roles y permisos.</span><span lang="en">The ticketing purchase and download flow, plus back-office mapping and evolving roles and permissions.</span></p></div>
         </div>
       </div>
     </div>
