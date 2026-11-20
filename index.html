@@ -291,7 +291,18 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
 }
 </style>
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script>
+(function(){
+  try{
+    var q=new URLSearchParams(location.search);
+    if(q.has('no-contar')) localStorage.setItem('pf-no-analytics','1');
+    if(q.has('contar')) localStorage.removeItem('pf-no-analytics');
+    if(q.has('no-contar')||q.has('contar')) history.replaceState(null,'',location.pathname+location.hash);
+    if(localStorage.getItem('pf-no-analytics')==='1') return;
+  }catch(e){}
+  var sc=document.createElement('script'); sc.defer=true; sc.src='/_vercel/insights/script.js'; document.head.appendChild(sc);
+})();
+</script>
 </head>
 <body>
 <div class="frame">
