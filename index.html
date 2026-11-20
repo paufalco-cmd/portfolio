@@ -206,6 +206,7 @@ details.more li{margin-bottom:8px}
 .recs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
 .rec{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;position:relative}
 .rec:first-child{grid-column:span 2;background:var(--dark);color:#EDEAE2;border-color:var(--dark)}
+.rec:nth-child(2){grid-column:span 2}
 .rec:first-child blockquote{font-size:22px;color:#fff}
 .rec:first-child figcaption span{color:#BFBAAE}
 .rec blockquote{font-family:var(--serif);font-size:19px;line-height:1.35;letter-spacing:-.005em}
@@ -280,7 +281,7 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
   .card.featured,.lead-card{grid-column:span 1;grid-template-columns:1fr}
   .block{grid-template-columns:1fr;gap:10px}
   .findings,.steps,.lead-grid,.contact-grid,.split,.mp,.recs{grid-template-columns:1fr}
-  .rec:first-child{grid-column:span 1}
+  .rec:first-child,.rec:nth-child(2){grid-column:span 1}
   .ladder{flex-wrap:wrap}.mp-steps{grid-template-columns:1fr}.ladder div{flex:1 1 45%}
   .step{border-right:0;border-bottom:1px solid var(--line)}
   .biz{grid-template-columns:repeat(2,1fr)}
@@ -833,6 +834,7 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
       <div>
         <h3><span lang="es">Recomendaciones en LinkedIn.</span><span lang="en">LinkedIn recommendations.</span></h3>
         <div class="recs">
+          <figure class="rec reveal"><blockquote><span lang="es">“Tiene esa combinación de iniciativa y pragmatismo que hace que las ideas no se queden solamente en conversaciones, sino que se conviertan en proyectos y resultados.”</span><span lang="en">“She has that mix of initiative and pragmatism that turns ideas into projects and results, instead of leaving them as conversations.”</span></blockquote><figcaption><b>Javier Auchterlonie</b><span>Head of Service Design</span><span lang="es">Supervisaba directamente a Paula</span><span lang="en">Paula's direct manager</span></figcaption></figure>
           <figure class="rec reveal"><blockquote><span lang="es">“Algo que valoro especialmente de su liderazgo es la confianza que deposita en las personas, dándote autonomía y las herramientas necesarias para que puedas desarrollarte, tomar decisiones y crecer profesionalmente.”</span><span lang="en">“Something I especially value about her leadership is the trust she places in people, giving you autonomy and the tools you need to develop, make decisions and grow professionally.”</span></blockquote><figcaption><b>Jean Paul Venegas López</b><span>Ssr Service Designer · itti</span><span lang="es">Paula fue su manager</span><span lang="en">Paula was his manager</span></figcaption></figure>
           <figure class="rec reveal"><blockquote><span lang="es">“Lo que más valoro es que no te da las respuestas, sino que te ayuda a encontrar el camino para llegar a la meta y te da espacio para proponer y crecer.”</span><span lang="en">“What I value most is that she doesn't give you the answers; she helps you find the way to the goal and gives you room to propose and grow.”</span></blockquote><figcaption><b>Jessica Giovanna Quiroga Quirós</b><span>Service Designer · Monchis</span><span lang="es">Paula fue su líder directa</span><span lang="en">Paula was her direct lead</span></figcaption></figure>
           <figure class="rec reveal"><blockquote><span lang="es">“Hace más preguntas correctas, te acompaña para que crezcas y lidera de forma natural, sin esfuerzos.”</span><span lang="en">“She asks the right questions, supports you as you grow and leads naturally, effortlessly.”</span></blockquote><figcaption><b>Agustina Chavarini</b><span>Ssr. Service Designer · itti</span><span lang="es">Dupla y luego su manager</span><span lang="en">Peer, then her manager</span></figcaption></figure>
