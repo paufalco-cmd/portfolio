@@ -135,6 +135,9 @@ h2.big{font-size:clamp(34px,4.6vw,58px);font-weight:400;letter-spacing:-.025em;l
 .facts{border-top:2px solid var(--ink)}
 .facts div{padding:16px 0;border-bottom:1px solid var(--line)}
 .facts dd{font-size:16px;margin-top:6px}
+.chapter{display:flex;align-items:baseline;gap:16px;margin:56px 0 0;padding:18px 0 0;border-top:2px solid var(--ink,#262622)}
+.chapter .label{color:var(--olive)}
+.chapter h2{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;font-size:34px;line-height:1.1;margin:0}
 .bignums{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:48px 0 24px}
 .bignum .n{font-size:clamp(48px,6vw,84px);font-weight:500;color:var(--olive);letter-spacing:-.05em;line-height:1}
 .bignum .bar{display:flex;gap:5px;margin:16px 0 12px}
@@ -401,13 +404,13 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
       <div class="cases">
         <article class="card featured reveal" data-go="caso-01">
           <div style="display:flex;flex-direction:column">
-            <div class="meta"><span class="label">01 · Naranja X · 2021</span><span class="label">Service Designer</span></div>
-            <h3><span lang="es">14 minutos para pedirla. <span class="hl">Hasta 5 semanas</span> para usarla.</span><span lang="en">14 minutes to apply. <span class="hl">Up to 5 weeks</span> to use it.</span></h3>
-            <p><span lang="es">Rediseño de la originación de tarjetas de crédito y la primera compra.</span><span lang="en">Redesigning credit card origination and first purchase.</span></p>
+            <div class="meta"><span class="label">01 · Naranja X · 2021–2022</span><span class="label">Service Designer</span></div>
+            <h3><span lang="es">La puerta de entrada a Naranja X, <span class="hl">de punta a punta.</span></span><span lang="en">The front door to Naranja X, <span class="hl">end to end.</span></span></h3>
+            <p><span lang="es">De la originación de tarjetas al onboarding de la nueva app, en plena transformación a fintech.</span><span lang="en">From card origination to onboarding for the new app, in the middle of a fintech transformation.</span></p>
             <div class="mini">
               <div><b>14 min</b><span lang="es">para originarse</span><span lang="en">to apply</span></div>
               <div><b>15 <span lang="es">días</span><span lang="en">days</span></b><span lang="es">para el plástico</span><span lang="en">to get the card</span></div>
-              <div><b>1 de 2</b><span lang="es">sin tarjeta a los 15 días</span><span lang="en">without card at day 15</span></div>
+              <div><b><span lang="es">23 de 100</span><span lang="en">23 of 100</span></b><span lang="es">llegaban a la home de la app</span><span lang="en">reached the app home screen</span></div>
             </div>
             <div style="margin-top:auto;padding-top:24px"><span class="btn"><span lang="es">Leer caso</span><span lang="en">Read case</span> →</span></div>
           </div>
@@ -441,7 +444,7 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
 <div class="view" id="v-casos">
   <div class="wrap">
     <div class="case-tabs">
-      <button class="ctab active" data-case="c1" data-go="caso-01"><i>01</i><span lang="es">Originación + 1ra compra</span><span lang="en">Origination + 1st purchase</span></button>
+      <button class="ctab active" data-case="c1" data-go="caso-01"><i>01</i><span lang="es">Originación + Onboarding</span><span lang="en">Origination + Onboarding</span></button>
       <button class="ctab" data-case="c2" data-go="caso-02"><i>02</i>Zendesk → Salesforce</button>
       <button class="ctab" data-case="c3" data-go="caso-03"><i>03</i>CRM × <span lang="es">Backoffice</span><span lang="en">Back office</span></button>
       
@@ -450,18 +453,19 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
     <div id="case-c1" class="case-pane">
       <div class="case-head">
         <div>
-          <div class="eyebrow"><span lang="es">Caso 01 · Service Designer · Naranja X · 2021</span><span lang="en">Case 01 · Service Designer · Naranja X · 2021</span></div>
-          <h1><span lang="es">14 minutos para pedirla. <span class="hl">Hasta 5 semanas</span> para usarla.</span><span lang="en">14 minutes to apply. <span class="hl">Up to 5 weeks</span> to use it.</span></h1>
-          <p class="lead"><span lang="es">Rediseño de la originación de tarjetas de crédito y de la primera compra. La pantalla era rápida; el problema estaba en el backstage.</span><span lang="en">Redesigning credit card origination and first purchase. The screens were fast; the problem was backstage.</span></p>
+          <div class="eyebrow"><span lang="es">Caso 01 · Service Designer · Naranja X · 2021–2022</span><span lang="en">Case 01 · Service Designer · Naranja X · 2021–2022</span></div>
+          <h1><span lang="es">La puerta de entrada a Naranja X, <span class="hl">de punta a punta.</span></span><span lang="en">The front door to Naranja X, <span class="hl">end to end.</span></span></h1>
+          <p class="lead"><span lang="es">Dos proyectos encadenados en plena transformación: Naranja X pasaba de tarjeta de crédito a fintech con billetera digital. Primero, el rediseño de la originación de tarjetas; después, el diagnóstico del onboarding de la nueva app.</span><span lang="en">Two connected projects in the middle of a transformation: Naranja X was evolving from a credit card into a fintech with a digital wallet. First, redesigning card origination; then, diagnosing onboarding for the new app.</span></p>
         </div>
         <dl class="facts">
           <div><dt class="label"><span lang="es">Rol</span><span lang="en">Role</span></dt><dd>Service Designer</dd></div>
-          <div><dt class="label"><span lang="es">Equipo</span><span lang="en">Team</span></dt><dd><span lang="es">Research, Product Design, Content, Producto y Operaciones</span><span lang="en">Research, Product Design, Content, Product and Operations</span></dd></div>
-          <div><dt class="label"><span lang="es">Método</span><span lang="en">Method</span></dt><dd><span lang="es">Simulación de flujos, +30 entrevistas a referentes, service blueprint, workshops</span><span lang="en">Flow simulations, 30+ stakeholder interviews, service blueprint, workshops</span></dd></div>
-          <div><dt class="label"><span lang="es">Duración</span><span lang="en">Duration</span></dt><dd><span lang="es">+6 meses</span><span lang="en">6+ months</span></dd></div>
+          <div><dt class="label"><span lang="es">Equipo</span><span lang="en">Team</span></dt><dd><span lang="es">UX Insights (research, mediciones y service design), Product Design, Content, Producto, Negocio, Marketing y Operaciones</span><span lang="en">UX Insights (research, measurement and service design), Product Design, Content, Product, Business, Marketing and Operations</span></dd></div>
+          <div><dt class="label"><span lang="es">Método</span><span lang="en">Method</span></dt><dd><span lang="es">Service blueprints, journey con métricas, +50 entrevistas a referentes, 25 testeos, +8.000 encuestas, workshops</span><span lang="en">Service blueprints, metrics-based journey, 50+ stakeholder interviews, 25 user tests, 8,000+ surveys, workshops</span></dd></div>
+          <div><dt class="label"><span lang="es">Duración</span><span lang="en">Duration</span></dt><dd><span lang="es">2021–2022 · dos etapas</span><span lang="en">2021–2022 · two stages</span></dd></div>
         </dl>
       </div>
 
+      <div class="chapter"><span class="label"><span lang="es">Capítulo 1 · 2021</span><span lang="en">Chapter 1 · 2021</span></span><h2><span lang="es">Originación de tarjetas</span><span lang="en">Card origination</span></h2></div>
       <div class="bignums reveal">
         <div class="bignum"><div class="n">14′</div><div class="bar"><span></span><span class="off"></span><span class="off"></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">para originarse y hacer el onboarding</span><span lang="en">to apply and onboard</span></div></div>
         <div class="bignum"><div class="n">15d</div><div class="bar"><span></span><span></span><span></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">para recibir el plástico</span><span lang="en">to receive the physical card</span></div></div>
@@ -536,7 +540,67 @@ footer{padding:36px 0;font-size:13px;color:var(--muted);display:flex;justify-con
         <div>
           <h3><span lang="es">Las iniciativas clave para la experiencia ideal.</span><span lang="en">The key initiatives for the ideal experience.</span></h3>
           <div class="tags"><span>Scoring online</span><span><span lang="es">Originación 100% in app + firma digital</span><span lang="en">100% in-app origination + e-signature</span></span><span><span lang="es">Tarjeta virtual</span><span lang="en">Virtual card</span></span><span><span lang="es">Pagos con QR</span><span lang="en">QR payments</span></span></div>
-          <p style="margin-top:18px"><span lang="es">El blueprint se volvió la referencia compartida del flujo y dio paso al discovery del onboarding in app.</span><span lang="en">The blueprint became the shared reference for the flow and led to the in-app onboarding discovery.</span></p>
+          <p style="margin-top:18px"><span lang="es">El blueprint se volvió la referencia compartida del flujo. Con la originación 100% in app, la entrada a la nueva app pasó a ser el siguiente desafío.</span><span lang="en">The blueprint became the shared reference for the flow. With 100% in-app origination, getting into the new app became the next challenge.</span></p>
+        </div>
+      </div>
+
+      <div class="chapter"><span class="label"><span lang="es">Capítulo 2 · 2022</span><span lang="en">Chapter 2 · 2022</span></span><h2><span lang="es">Onboarding de la App NX</span><span lang="en">App NX onboarding</span></h2></div>
+      <div class="block reveal">
+        <div class="label"><span lang="es">Contexto</span><span lang="en">Context</span></div>
+        <div>
+          <h3><span lang="es">Una fintech nueva y dos apps conviviendo.</span><span lang="en">A new fintech and two apps side by side.</span></h3>
+          <p><span lang="es">Con la aprobación para operar como fintech, Naranja X lanzó su billetera digital y una nueva app, la App NX, que convivía con la app Naranja de la tarjeta. En la migración y la unificación de las apps, muchos clientes quedaron bloqueados o se perdieron en el camino. El onboarding era la puerta de entrada al ecosistema y tenía una de las notas de facilidad más bajas de la compañía.</span><span lang="en">Once approved to operate as a fintech, Naranja X launched its digital wallet and a new app, App NX, which coexisted with the Naranja credit card app. During the migration and the merging of both apps, many customers got blocked or dropped off along the way. Onboarding was the front door to the ecosystem, and it had one of the lowest ease scores in the company.</span></p>
+        </div>
+      </div>
+      <div class="bignums reveal">
+        <div class="bignum"><div class="n">64%</div><div class="bar"><span></span><span></span><span></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">de CES de onboarding, de las notas de facilidad más bajas</span><span lang="en">onboarding CES, among the lowest ease scores</span></div></div>
+        <div class="bignum"><div class="n">23/100</div><div class="bar"><span></span><span class="off"></span><span class="off"></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">usuarios que iniciaban el flujo llegaban a la home</span><span lang="en">users who started the flow reached the home screen</span></div></div>
+        <div class="bignum"><div class="n">30%</div><div class="bar"><span></span><span></span><span class="off"></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">se caía entre crear usuario y clave y validar el mail</span><span lang="en">dropped off between creating credentials and validating email</span></div></div>
+        <div class="bignum"><div class="n">14%</div><div class="bar"><span></span><span class="off"></span><span class="off"></span><span class="off"></span><span class="off"></span></div><div class="t"><span lang="es">terminaba derivado a onboarding manual</span><span lang="en">ended up routed to manual onboarding</span></div></div>
+      </div>
+      <div class="block reveal">
+        <div class="label"><span lang="es">Abordaje</span><span lang="en">Approach</span></div>
+        <div>
+          <h3><span lang="es">Medir, probar en campo y escuchar a cada equipo.</span><span lang="en">Measure, test in the field and listen to every team.</span></h3>
+          <div class="split">
+            <div class="steps">
+              <div class="step"><span class="label">01</span><h4><span lang="es">Medir</span><span lang="en">Measure</span></h4><p><span lang="es">+8.000 personas encuestadas (CES de onboarding, 3 meses) y métricas de Amplitude en cada etapa.</span><span lang="en">8,000+ people surveyed (onboarding CES, 3 months) and Amplitude metrics at every stage.</span></p></div>
+              <div class="step"><span class="label">02</span><h4><span lang="es">Testear</span><span lang="en">Test</span></h4><p><span lang="es">25 testeos con usuarios nuevos en activaciones de marketing en Córdoba, Buenos Aires, Tucumán y Mendoza.</span><span lang="en">25 tests with new users at marketing activations in Córdoba, Buenos Aires, Tucumán and Mendoza.</span></p></div>
+              <div class="step"><span class="label">03</span><h4><span lang="es">Escuchar</span><span lang="en">Listen</span></h4><p><span lang="es">20 entrevistas a referentes de onboarding manual, Producto, Negocio, Marketing y UX.</span><span lang="en">20 interviews with leads from manual onboarding, Product, Business, Marketing and UX.</span></p></div>
+              <div class="step"><span class="label">04</span><h4><span lang="es">Mapear</span><span lang="en">Map</span></h4><p><span lang="es">Service blueprint del onboarding y un journey core con las métricas de cada etapa.</span><span lang="en">An onboarding service blueprint and a core journey with metrics for each stage.</span></p></div>
+            </div>
+            <figure class="fig peek" data-zoom="img/c1-onb-journey.jpg"><img src="img/c1-onb-journey.jpg" alt="Journey core onboarding App NX" style="object-position:50% 60%"><span class="cap"><span lang="es">Journey core: dónde se caía cada usuario</span><span lang="en">Core journey: where users dropped off</span></span></figure>
+          </div>
+        </div>
+      </div>
+      <div class="block reveal">
+        <div class="label"><span lang="es">Hallazgos</span><span lang="en">Findings</span></div>
+        <div>
+          <h3><span lang="es">Cada etapa tenía su propia caída.</span><span lang="en">Every stage had its own drop-off.</span></h3>
+          <div class="split">
+            <div class="findings">
+              <div class="finding"><span class="k">01</span><h4><span lang="es">La expectativa equivocada</span><span lang="en">The wrong expectation</span></h4><p><span lang="es">Muchos usuarios nuevos llegaban buscando una tarjeta de crédito y se encontraban con una cuenta virtual.</span><span lang="en">Many new users arrived looking for a credit card and found a virtual account instead.</span></p></div>
+              <div class="finding"><span class="k">02</span><h4><span lang="es">El sign up, el mayor abandono</span><span lang="en">Sign-up, the biggest drop-off</span></h4><p><span lang="es">Bugs en la validación del mail y la contraseña, y credenciales distintas según el canal.</span><span lang="en">Bugs in email and password validation, and different credentials depending on the channel.</span></p></div>
+              <div class="finding"><span class="k">03</span><h4><span lang="es">Validar la identidad, mucho esfuerzo</span><span lang="en">Identity checks, high effort</span></h4><p><span lang="es">Fotos que fallaban sin un feedback claro, poca percepción de valor y desconfianza al compartir el DNI.</span><span lang="en">Photos failing without clear feedback, little perceived value and distrust about sharing ID.</span></p></div>
+              <div class="finding"><span class="k">04</span><h4><span lang="es">Un final sin señales</span><span lang="en">An ending with no signals</span></h4><p><span lang="es">Usuarios "atrapados" en "Tu cuenta está casi lista", a veces más de 5 días, sin saber si ya estaban onboardeados.</span><span lang="en">Users "stuck" on "Your account is almost ready", sometimes for over 5 days, unsure whether they were onboarded.</span></p></div>
+            </div>
+            <figure class="fig peek" data-zoom="img/c1-onb-blueprint.jpg"><img src="img/c1-onb-blueprint.jpg" alt="Service blueprint onboarding App NX" style="object-position:40% 50%"><span class="cap"><span lang="es">Service blueprint del onboarding</span><span lang="en">Onboarding service blueprint</span></span></figure>
+          </div>
+        </div>
+      </div>
+      <div class="block reveal">
+        <div class="label"><span lang="es">Del mapa a la acción</span><span lang="en">From map to action</span></div>
+        <div>
+          <h3><span lang="es">Un Playbook para decidir y priorizar.</span><span lang="en">A Playbook to decide and prioritize.</span></h3>
+          <p><span lang="es">Un único entregable con los pain points de los clientes y las debilidades técnicas del flujo, y accionables por etapa con un equipo dueño de cada uno: Producto, UX, Content, IT, Negocio y Marketing. De ahí salió un memo de accionables que funcionó como backlog, con seguimiento desde service design junto a cada referente y equipo.</span><span lang="en">A single deliverable bringing together customer pain points and the flow's technical weaknesses, with actionables per stage and an owner team for each one: Product, UX, Content, IT, Business and Marketing. It became an actionables memo that worked as a backlog, followed up from service design with each lead and team.</span></p>
+        </div>
+      </div>
+      <div class="block reveal">
+        <div class="label"><span lang="es">Impacto en producto</span><span lang="en">Product impact</span></div>
+        <div>
+          <h3><span lang="es">Del diagnóstico al roadmap de Producto.</span><span lang="en">From diagnosis to the Product roadmap.</span></h3>
+          <div class="tags"><span><span lang="es">Mejoras del sign up</span><span lang="en">Sign-up improvements</span></span><span><span lang="es">Feedback y ayuda en la captura de fotos</span><span lang="en">Photo capture feedback and help</span></span><span><span lang="es">Estado del onboarding dentro de la app</span><span lang="en">In-app onboarding status</span></span><span><span lang="es">Walkthrough + coachmarks</span><span lang="en">Walkthrough + coachmarks</span></span><span><span lang="es">Mail de bienvenida</span><span lang="en">Welcome email</span></span><span><span lang="es">Unificación de credenciales</span><span lang="en">Unified credentials</span></span></div>
+          <p style="margin-top:18px"><span lang="es">Producto incorporó el memo a su roadmap, y el journey pasó a ser la referencia para priorizar el onboarding con foco en los dolores de los clientes.</span><span lang="en">Product added the memo to its roadmap, and the journey became the reference for prioritizing onboarding around customer pain points.</span></p>
         </div>
       </div>
 
